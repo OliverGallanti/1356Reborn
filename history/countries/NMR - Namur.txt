@@ -1,0 +1,82 @@
+government = monarchy
+add_government_reform = high_feudal_monarchy_reform
+government_rank = 1 #County
+technology_group = western
+religion = catholic
+primary_culture = wallonian
+capital = 1866	# Namur
+fixed_capital = 1866 # Cannot move capital away from this province & no power cost to move to it
+
+1310.1.1 = {
+	monarch = {
+		name = "John I"
+		dynasty = "de Dampierre"
+		birth_date = 1267.1.1 #Full Month/day unknown
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+1335.1.1 = {
+	monarch = {
+		name = "Guy II"
+		dynasty = "de Dampierre"
+		birth_date = 1312.1.1 #Full Month/day unknown
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+1336.1.1 = {
+	monarch = {
+		name = "Philip"
+		dynasty = "de Dampierre"
+		birth_date = 1319.1.1 #Full Month/day unknown
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1337.1.1 = {
+	monarch = {
+		name = "Willem I"
+		dynasty = "de Dampierre"
+		birth_date = 1324.1.1 #Full Month/day unknown
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Willem"
+		monarch_name = "Willem II"
+		dynasty = "de Dampierre"
+		birth_date = 1355.1.22
+		death_date = 1418.1.10
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 1
+	}
+}
+1391.1.1 = {
+	monarch = {
+		name = "Willem II"
+		dynasty = "de Dampierre"
+		birth_date = 1355.1.22
+		adm = 4
+		dip = 3
+		mil = 1
+	}
+}
+1418.1.1 = {
+	monarch = {
+		name = "John III"
+		dynasty = "de Dampierre"
+		birth_date = 1355.1.22
+		adm = 2
+		dip = 4
+		mil = 2
+	}
+}
+#1429 he sold his county fo Phillip of Burgundy for 30,000 ducats 

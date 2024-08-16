@@ -1,0 +1,30 @@
+name = "Red Turban Rebellion"
+#casus_belli = cb_reconquest
+war_goal = {
+	type = goal_chinese_civil_war
+	casus_belli = cb_chinese_civil_war
+	province = 1816
+}
+
+1352.1.1 = {
+    add_attacker = QIC
+	add_attacker = ZHU
+	add_attacker = FAN
+	add_attacker = CSO
+	add_attacker = WUU
+	add_defender = YUA
+	add_defender = CBL
+	add_defender = X01
+}
+
+# Peace
+1362.12.31 = {
+    rem_attacker = QIC
+    rem_attacker = ZHU
+	rem_attacker = FAN
+	rem_attacker = CSO
+	rem_attacker = WUU
+	rem_defender = YUA
+	rem_defender = CBL
+	rem_defender = X01
+}

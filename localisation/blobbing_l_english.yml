@@ -1,0 +1,6 @@
+﻿l_english:
+ 
+ SLACK_TEXT:1 "We will slacken recruiting standards lowering our Army Professionalism by $DROP|Y$ and as long we are above §Y20§! Professionalism we will have the following modifier:"
+ ARMY_PROFESSIONALISM_STATIC_MODIFIERS_DESC:1 "§YImmediate Gain:§!\nRecruit General: §G+1%§!\nRecruit Mercenary: §R-2.5%§!"
+ CENTRALIZE_STATE_DESC:7 "§YCentralize State§!\nSpend $COST|Y$ of government progress and $POWER_COST|Y$£adm£ to centralize the $STATE|Y$ in the most developed province, giving the following bonuses to the state:\nLocal State Governing Cost: §G-34.0%§!\nState Maintenance: §G-20.0%§!\nLocal Prosperity Growth: §G+0.25§!\n\nIt will take $YEARS|0Y$ years."
+ CONFIRM_CENTRALIZE_STATE_TEXT:7 "Are you sure you want to spend $COST|0Y$ of government progress and $POWER_COST|Y$£adm£ to centralize the $STATE|Y$ in the province of $PROVINCE|Y$?\nThe $STATE|Y$ will gain the following bonuses:\nLocal State Governing Cost: §G-34.0%§!\nState Maintenance: §G-20.0%§!\nLocal Prosperity Growth: §G+0.25§!\n\nIt will take $YEARS|0Y$ years."

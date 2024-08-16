@@ -1,0 +1,105 @@
+country_decisions = {
+
+	establish_timurid_empire = {
+		major = yes
+		potential = {
+			tag = TRS
+			has_global_flag = tamerlane_arrived_in_transoixana
+			is_emperor_of_china = no
+			NOT = { has_global_flag = founded_timurid_empire }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			total_development = 120
+			tag = TRS
+			NOT = { exists = TIM }
+		}
+		effect = {
+			change_tag = TIM
+			set_global_flag = founded_timurid_empire
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = ARM_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}			
+			set_government_rank = 3
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			change_government = monarchy
+			add_government_reform = iqta
+			hidden_effect = { # to give Timurid dynasty
+				country_event = { id = timurid_emergence.7 }
+			}				
+			persia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = TIM
+			}
+			khorasan_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = TIM
+			}	
+			mashriq_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = TIM
+			}			
+			add_country_modifier = {
+				name = "timurid_centrialization"
+				duration = 9125
+			}
+			add_prestige = 25
+			add_adm_tech = 2
+			add_mil_tech = 2
+			add_dip_tech = 2
+			change_technology_group = muslim
+			change_unit_type = muslim
+			every_owned_province = {
+				add_institution_embracement = {
+					which = feudalism
+					value = 100
+				}
+				add_institution_embracement = {
+					which = mercantilism_institution
+					value = 100
+				}
+			}	
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 1000
+	}
+	
+	leave_tatar_yoke = {
+		major = yes
+		potential = {
+			is_subject_of_type = golden_horde_tributary_state
+			is_subject_of = WHI
+		}
+		allow = {
+			is_at_war = no
+			is_year = 1410
+			is_subject_of = WHI
+		}
+		effect = {	
+			add_prestige = -20
+			grant_independence = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 1000
+	}	
+	
+}

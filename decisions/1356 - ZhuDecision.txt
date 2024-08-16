@@ -1,0 +1,19 @@
+country_decisions = {
+	my_first_decision = {
+        major = no
+		potential = {
+		    tag = ZHU
+		}
+		allow = {
+			owns_core_province = 1821	# Nanking
+			owns_core_province = 1822	# Suzhou
+			owns_core_province = 682	# Wuchang
+		}
+		effect = {
+		    change_tag = MNG
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

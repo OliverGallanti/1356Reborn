@@ -1,0 +1,51 @@
+government = tribal
+add_government_reform = tribal_kingdom
+government_rank = 1
+technology_group = eastern
+religion = sunni
+primary_culture = bolghar
+capital = 4267 # Bolgar
+
+1356.1.1 = {
+	add_country_modifier = {
+		name = "uralic_technology_starting_modifier"
+		duration = -1
+	}
+	add_country_modifier = {
+		name = "uralic_force_limit_starting_modifier"
+		duration = -1
+	}
+	add_country_modifier = {
+		name = "uralic_army_starting_modifier"
+		duration = -1
+	}
+	add_country_modifier = {
+		name = "uralic_religion_starting_modifier"
+		duration = -1
+	}
+	monarch = { # Ahistorical but lets give them something unique
+		name = "Pavel"
+		dynasty = "Qamay"
+		dip = 5
+		adm = 5
+		mil = 5
+		birth_date = 1321.7.21
+		leader = {
+			name = "Pavel Qamay"
+			type = general
+			fire = 1	
+			shock = 6	
+			manuever = 3	
+			siege = 1
+		}
+	}
+	heir = { 
+		name = "Simeon"
+		dynasty = "Qamay"
+		dip = 5
+		adm = 3
+		mil = 6
+		birth_date = 1353.2.28
+		death_date = 1400.1.1
+	}	
+}

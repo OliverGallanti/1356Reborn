@@ -1,0 +1,21 @@
+government = republic
+add_government_reform = oligarchy_reform
+government_rank = 1
+technology_group = western
+religion = catholic
+primary_culture = swiss
+capital = 1869 # Waldstätte
+
+1356.1.1 = {
+	monarch = {
+		name = "Die Tagsatzung"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}
+
+#1356.12.26 = {
+#	add_government_reform = swiss_canton_reform
+#}

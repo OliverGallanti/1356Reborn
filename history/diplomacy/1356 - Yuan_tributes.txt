@@ -1,0 +1,85 @@
+#Yuan Tributes
+#dependency = {
+#	subject_type = "tributary_state"
+#	first = YUA
+#	second = CHG
+#	start_date = 1355.1.1
+#	end_date = 1380.9.8
+#}
+#dependency = {
+#	subject_type = "tributary_state"
+#	first = YUA
+#	second = UTS
+#	start_date = 1355.1.1
+#	end_date = 1380.9.8
+#}
+#dependency = {
+#	subject_type = "tributary_state"
+#	first = YUA
+#	second = GYO
+#	start_date = 1355.1.1
+#	end_date = 1380.9.8
+#}
+#dependency = {
+#	subject_type = "tributary_state"
+#	first = YUA
+#	second = DAI
+#	start_date = 1355.1.1
+#	end_date = 1380.9.8
+#}
+# dependency = {
+	# subject_type = "tributary_state"
+	# first = YUA
+	# second = LXA
+	# start_date = 1355.1.1
+	# end_date = 1380.9.8
+# }
+
+vassal = { # Liaoyang in Manchuria
+	first = YUA
+	second = X01
+	start_date = 1355.1.1
+	end_date = 1365.9.8
+}
+
+vassal = {
+	first = YUA
+	second = CBL
+	start_date = 1355.1.1
+	end_date = 1365.9.8
+}
+
+vassal = {
+	first = YUA
+	second = CKT
+	start_date = 1362.1.1
+	end_date = 1365.9.8
+}
+
+vassal = {
+	first = YUA
+	second = BTM
+	start_date = 1362.1.1
+	end_date = 1365.9.8
+}
+
+vassal = {
+	first = YUA
+	second = CLS
+	start_date = 1362.1.1
+	end_date = 1365.9.8
+}
+
+vassal = {
+	first = YUA
+	second = ZLB
+	start_date = 1362.1.1
+	end_date = 1365.9.8
+}
+
+vassal = {
+	first = YUA
+	second = POY
+	start_date = 1362.1.1
+	end_date = 1365.9.8
+}

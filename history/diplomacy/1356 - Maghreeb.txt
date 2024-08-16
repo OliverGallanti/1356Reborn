@@ -1,0 +1,63 @@
+alliance = { #Tunis and Sfax
+	first = TUN
+	second = SFX
+	start_date = 1356.12.26
+	end_date = 1420.1.1
+}
+
+alliance = { #Fezzan and Tripoli
+	first = FZA
+	second = TRP
+	start_date = 1356.12.26
+	end_date = 1420.1.1
+}
+
+alliance = { #Tlemcen and Kebir
+	first = TLC
+	second = KEB
+	start_date = 1356.12.26
+	end_date = 1420.1.1
+}
+
+alliance = { #Fez and Tetouan
+	first = FEZ
+	second = TET
+	start_date = 1356.12.26
+	end_date = 1440.1.1
+}
+
+alliance = { #Fez and Cebta
+	first = FEZ
+	second = CBT
+	start_date = 1356.12.26
+	end_date = 1400.1.1
+}
+
+alliance = { #Morocco and Sale
+	first = MOR
+	second = SLE
+	start_date = 1356.12.26
+	end_date = 1420.1.1
+}
+
+alliance = { #Morocco and Safi
+	first = MOR
+	second = SAF
+	start_date = 1356.12.26
+	end_date = 1420.1.1
+}
+
+
+alliance = { #Tunis and Djerba
+	first = TUN
+	second = DJE
+	start_date = 1356.12.26 
+	end_date = 1400.1.1
+}
+
+vassal = {
+	first = MOR
+	second = MRK
+	start_date = 1356.1.1
+	end_date = 1443.12.31
+}

@@ -1,0 +1,9 @@
+song = {
+	name = "in_taverns_and_great_halls"
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { is_year = 1450 }
+		}		
+	}
+}

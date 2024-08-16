@@ -1,0 +1,22 @@
+government = tribal
+add_government_reform = tribal_kingdom
+government_rank = 1
+technology_group = muslim
+religion = sunni
+primary_culture = tripolitanian_culture
+capital = 2452	# Zuwarah
+fixed_capital = 2452 # Cannot move capital away from this province & no power cost to move to it
+religious_school = maliki_school
+
+#Based in Djerba
+
+1356.1.1 = {
+	monarch = {
+		name = "Khalil"
+		dynasty = "Barek"
+		birth_date = 1315.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}

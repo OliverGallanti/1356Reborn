@@ -1,0 +1,9 @@
+music = {
+	name = "in_taverns_and_great_halls"
+	file = "in_taverns_and_great_halls.ogg"
+}
+
+music = {
+	name = "the_voyage_main_theme"
+	file = "the_voyage_main_theme.ogg"
+}

@@ -1,0 +1,27 @@
+# - Regensburg
+
+owner = REG
+controller = REG
+add_core = REG
+#add_core = REG
+culture = bavarian
+religion = catholic
+base_tax = 6
+base_production = 6
+trade_goods = cloth #Fustians
+base_manpower = 1
+capital	= "Regensburg" 
+is_city = yes
+ 
+hre = yes
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+center_of_trade = 2
+
+1837.1.1 = { 
+    owner = BAV
+	controller = BAV
+	add_core = BAV
+}

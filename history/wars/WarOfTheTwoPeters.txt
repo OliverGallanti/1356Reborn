@@ -1,0 +1,30 @@
+# Audax Validator "!" Ignore_ALL
+# War of the Two Peters
+
+name = "War of the Two Peters"
+war_goal = {
+	type = take_capital_throne_castile
+	casus_belli = cb_castile_civil_war
+	tag = CAS
+}
+
+1356.12.26 = { # Claim in kingdom of Valencia, more access to mediterrean sea
+	add_attacker = CTR
+	add_attacker = ARA
+	add_attacker = MJO
+	add_attacker = SAR #Excluded for Balance #### Readded with Genoa
+	add_defender = CAS
+	add_defender = POR
+	add_defender = GEN	
+}
+
+
+1369.3.23 = { # Start of Castillian Civil War
+	rem_attacker = CTR
+	rem_attacker = ARA
+	rem_attacker = MJO
+	rem_attacker = SAR 
+	rem_defender = CAS
+	rem_defender = POR
+	rem_defender = GEN
+}

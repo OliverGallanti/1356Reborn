@@ -1,0 +1,3 @@
+country_decisions = {
+#Empty to give us greater control over the TAG	
+}

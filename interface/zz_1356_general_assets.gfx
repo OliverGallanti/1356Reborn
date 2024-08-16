@@ -1,0 +1,710 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_cb_hussite_conformance"
+		texturefile = "gfx/interface/casus_bellis/cb_heretic.tga"
+		noOfFrames = 1
+
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "GFX_great_project_great_library"	
+		texturefile = "gfx//interface//great_projects//great_project_alhambra.dds"
+	}	
+
+	spriteType = {
+		name = "cb_medieval_crusade"
+		texturefile = "gfx/interface/casus_bellis/cb_crusade.tga"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+	}		
+
+	spriteType = {
+		name = "GFX_cb_romuva_conformance"
+		texturefile = "gfx/interface/casus_bellis/cb_heretic.tga"
+		noOfFrames = 1
+
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+
+	spriteType = {
+		name = "GFX_cb_chinese_civil_war"
+		texturefile = "gfx/interface/casus_bellis/cb_nationalist.tga"
+		noOfFrames = 1
+
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "GFX_country_icon_religion"
+		texturefile = "gfx//interface//country_icon_religion.dds"
+		noOfFrames = 60 #Was 33
+	}
+
+	spriteType = {
+		name = "GFX_icon_religion"
+		texturefile = "gfx//interface//icon_religion.dds"
+		noOfFrames = 60
+###		loadType = "INGAME"
+		
+	}
+
+	spriteType = {
+		name = "GFX_icon_religion_small"
+		texturefile = "gfx//interface//icon_religion_small.dds"
+		noOfFrames = 60
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_idea_theocratic_ideas"
+		texturefile = "gfx//interface//ideas//idea_administrative_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+
+	spriteType = {
+		name = "GFX_religion_icon_strip"
+		texturefile = "gfx//interface//icon_religion_small.dds"
+		transparencecheck = yes
+		noOfFrames = 60
+	}
+
+	spriteType = {
+		name = "GFX_province_view_religion"
+		texturefile = "gfx//interface//province_view_religion.dds"
+		noOfFrames = 60
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "JAN_HUS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_SAFFRON/JAN_HUS_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "JAN_ZIZKA_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_SAFFRON/JAN_ZIZKA_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "QUEEN_MARGARET_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_SAFFRON/QUEEN_MARGARET_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "QUEEN_MARGARET_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_SAFFRON/QUEEN_MARGARET_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "JOAN_OF_ARC_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_SAFFRON/JOAN_OF_ARC_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_mod_icon"
+		texturefile = "gfx/interface/1356_icon.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_age_of_feudalism"
+		texturefile = "gfx/interface/ages/age_of_feudalism.tga"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_age_indicator"
+		texturefile = "gfx/interface/ages/age_indicator.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_age_s"
+		texturefile = "gfx/interface/ages/icon_age_s.dds"
+		noOfFrames = 5
+	}
+
+	spriteType = {
+		name = "GFX_icon_age_g"
+		texturefile = "gfx/interface/ages/icon_age_g.dds"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_icon_feudalvassal"
+		texturefile = "gfx/interface/icon_feudalvassal.dds"
+	}
+	spriteType = {
+		name = "GFX_diplomacy_leadfeudalvassal"
+		texturefile = "gfx//interface//icon_diplomacy_leadfeudalvassal.dds"
+		legacy_lazy_load=no
+	}
+	spriteType = {
+		name = "GFX_diplomacy_amfeudalvassal"
+		texturefile = "gfx//interface//icon_diplomacy_amfeudalvassal.dds"
+		legacy_lazy_load=no
+	}
+	
+	spriteType = {
+		name = "GFX_icon_nomadicclan"
+		texturefile = "gfx/interface/icon_nomadicclan.dds"
+	}
+	spriteType = {
+		name = "GFX_diplomacy_leadnomadicclan"
+		texturefile = "gfx//interface//icon_diplomacy_leadnomadicclan.dds"
+		legacy_lazy_load=no
+	}
+	spriteType = {
+		name = "GFX_diplomacy_amnomadicclan"
+		texturefile = "gfx//interface//icon_diplomacy_amnomadicclan.dds"
+		legacy_lazy_load=no
+	}	
+	
+
+# Age of Feudalism Objectives
+	spriteType = {
+		name = "GFX_obj_higher_prestige"
+		texturefile = "gfx/interface/ages/obj_higher_prestige.dds"
+	}
+
+	spriteType = {
+		name = "GFX_obj_trade_league"
+		texturefile = "gfx/interface/ages/obj_trade_league.dds"
+	}
+
+	spriteType = {
+		name = "GFX_obj_20_development_city"
+		texturefile = "gfx/interface/ages/obj_20_development_city.dds"
+	}
+
+	spriteType = {
+		name = "GFX_obj_papal_controller"
+		texturefile = "gfx/interface/ages/obj_papal_controller.dds"
+	}
+
+	spriteType = {
+		name = "GFX_obj_feudalism_muslim_piety"
+		texturefile = "gfx/interface/ages/obj_feudalism_muslim_piety.dds"
+	}
+
+	spriteType = {
+		name = "GFX_obj_non_christian_muslim_religious_unity"
+		texturefile = "gfx/interface/ages/obj_non_christian_muslim_religious_unity.dds"
+	}
+
+	spriteType = {
+		name = "GFX_obj_deus_vult"
+		texturefile = "gfx/interface/ages/obj_deus_vult.dds"
+	}
+
+	spriteType = {
+		name = "GFX_obj_muslim_holy_war"
+		texturefile = "gfx/interface/ages/obj_muslim_holy_war.dds"
+	}
+
+	spriteType = {
+		name = "GFX_obj_feudal_generic_non_abrahamic_holy_war"		
+		texturefile = "gfx/interface/ages/obj_feudal_generic_non_abrahamic_holy_war.dds"
+	}
+
+	spriteType = {
+		name = "GFX_obj_many_vassals_f"		
+		texturefile = "gfx/interface/ages/obj_many_vassals_f.dds"
+	}
+
+	spriteType = {
+		name = "GFX_obj_cav_army"		
+		texturefile = "gfx/interface/ages/obj_cav_army.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_obj_feudalism_zoroastrian_jewish_sikh"
+		texturefile = "gfx/interface/ages/obj_feudalism_zoroastrian_jewish_sikh.dds"	
+	}
+	
+	spriteType = {
+		name = "GFX_obj_feudalism_obj_african_religion_holy_war"
+		texturefile = "gfx/interface/ages/obj_african_religion_holy_war.dds"	
+	}	
+
+	spriteType = {
+		name = "GFX_obj_animism_religion_holy_war"
+		texturefile = "gfx/interface/ages/obj_animism_religion_holy_war.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_obj_baltic_holy_war"
+		texturefile = "gfx/interface/ages/obj_baltic_holy_war.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_obj_buddhist_holy_war"
+		texturefile = "gfx/interface/ages/obj_buddhist_holy_war.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_obj_confu_holy_war"
+		texturefile = "gfx/interface/ages/obj_confu_holy_war.dds"	
+	}
+
+
+	spriteType = {
+		name = "GFX_obj_dharmic_holy_war"
+		texturefile = "gfx/interface/ages/obj_dharmic_holy_war.dds"	
+	}
+	
+	spriteType = {
+		name = "GFX_obj_feudal_generic_non_abrahamic_holy_war"
+		texturefile = "gfx/interface/ages/obj_feudal_generic_non_abrahamic_holy_war.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_obj_finnic_holy_war"
+		texturefile = "gfx/interface/ages/obj_finnic_holy_war.dds"	
+	}
+	
+	spriteType = {
+		name = "GFX_obj_hellenic_holy_war"
+		texturefile = "gfx/interface/ages/obj_hellenic_holy_war.dds"	
+	}	
+
+	spriteType = {
+		name = "GFX_obj_jewish_holy_war"
+		texturefile = "gfx/interface/ages/obj_jewish_holy_war.dds"	
+	}	
+	
+	spriteType = {
+		name = "GFX_obj_meso_holy_war"
+		texturefile = "gfx/interface/ages/obj_meso_holy_war.dds"	
+	}	
+	
+	spriteType = {
+		name = "GFX_obj_meso_inti_holy_war"
+		texturefile = "gfx/interface/ages/obj_meso_inti_holy_war.dds"	
+	}	
+	
+	spriteType = {
+		name = "GFX_obj_norse_holy_war"
+		texturefile = "gfx/interface/ages/obj_norse_holy_war.dds"	
+	}
+	
+	spriteType = {
+		name = "GFX_obj_shinto_holy_war"
+		texturefile = "gfx/interface/ages/obj_shinto_holy_war.dds"	
+	}		
+	
+	spriteType = {
+		name = "GFX_obj_slavic_holy_war"
+		texturefile = "gfx/interface/ages/obj_slavic_holy_war.dds"	
+	}	
+	
+	spriteType = {
+		name = "GFX_obj_tengri_holy_war"
+		texturefile = "gfx/interface/ages/obj_tengri_holy_war.dds"	
+	}	
+
+	spriteType = {
+		name = "GFX_obj_totemism_religion_holy_war"
+		texturefile = "gfx/interface/ages/obj_totemism_religion_holy_war.dds"	
+	}
+
+	spriteType = {
+		name = "GFX_obj_zoroastrian_holy_war"
+		texturefile = "gfx/interface/ages/obj_zoroastrian_holy_war.dds"	
+	}		
+
+	
+	spriteType = {
+		name = "GFX_obj_feudalism_fetishist"
+		texturefile = "gfx/interface/ages/obj_feudalism_fetishist.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_obj_feudalism_hindu_pagan_gods"
+		texturefile = "gfx/interface/ages/obj_feudalism_hindu_pagan_gods.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_obj_feudalism_buddhism_karma"
+		texturefile = "gfx/interface/ages/obj_feudalism_buddhism_karma.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_obj_feudalism_confucianism_harmony"
+		texturefile = "gfx/interface/ages/obj_feudalism_confucianism_harmony.dds"
+	}
+	
+	
+	spriteType = {
+		name = "GFX_obj_king_takes_direct_command"
+		texturefile = "gfx/interface/ages/obj_king_takes_direct_command.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_obj_twice_crowned"
+		texturefile = "gfx/interface/ages/obj_twice_crowned.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_obj_powerful_estate"
+		texturefile = "gfx/interface/ages/obj_powerful_estate.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_obj_powerful_estate_england"
+		texturefile = "gfx/interface/ages/obj_powerful_estate_england.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_ab_cavalry_supremacy"
+		texturefile = "gfx/interface/ages/ab_cavalry_supremacy.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ab_feudal_contracts"
+		texturefile = "gfx/interface/ages/ab_feudal_contracts.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_obj_feudalism_institution"
+		texturefile = "gfx/interface/ages/obj_feudalism_institution.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_obj_feudal_generic_non_abrahamic_competent_ruler"
+		texturefile = "gfx/interface/ages/obj_feudal_generic_non_abrahamic_competent_ruler.dds"
+	}
+
+	spriteType = {
+		name = "GFX_obj_feudalism_orthodox_icons"
+		texturefile = "gfx/interface/ages/obj_feudalism_orthodox_icons.dds"
+	}
+
+	spriteType = {
+		name = "GFX_obj_feudalism_coptic"
+		texturefile = "gfx/interface/ages/obj_feudalism_coptic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_obj_feudalism_nestorian"
+		texturefile = "gfx/interface/ages/obj_feudalism_nestorian.dds"
+	}
+
+	spriteType = {
+		name = "GFX_obj_feudalism_hussite"
+		texturefile = "gfx/interface/ages/obj_feudalism_hussite.dds"
+	}
+
+# Age of Feudalism Abilities
+	spriteType = {
+		name = "GFX_ab_allow_feudal_de_jure_law_f"
+		texturefile = "gfx/interface/ages/ab_allow_feudal_de_jure_law_f.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ab_feudalism_vassals"
+		texturefile = "gfx/interface/ages/ab_feudalism_vassals.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ab_gothic_architecture"
+		texturefile = "gfx/interface/ages/ab_gothic_architecture.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ab_feudalism_court_life"
+		texturefile = "gfx/interface/ages/ab_feudalism_court_life.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ab_mercs_over_chevaliers"
+		texturefile = "gfx/interface/ages/ab_mercs_over_chevaliers.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ab_chevauchee"
+		texturefile = "gfx/interface/ages/ab_chevauchee.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ab_feudalism_quality_trade_ships"
+		texturefile = "gfx/interface/ages/ab_feudalism_quality_trade_ships.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ab_nomad_age_bonus"
+		texturefile = "gfx/interface/ages/ab_nomad_age_bonus.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ab_england_longbowmen"
+		texturefile = "gfx/interface/ages/ab_england_longbowmen.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ab_asia_large_conquests"
+		texturefile = "gfx/interface/ages/ab_asia_large_conquests.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ab_feudalism_avignon_papacy"
+		texturefile = "gfx/interface/ages/ab_feudalism_avignon_papacy.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ab_feudalism_institution_gain"
+		texturefile = "gfx/interface/ages/ab_feudalism_institution_gain.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ab_gothic_cathedrals"
+		texturefile = "gfx/interface/ages/ab_gothic_cathedrals.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ab_feudalism_iron_fisted_rule"
+		texturefile = "gfx/interface/ages/ab_feudalism_iron_fisted_rule.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ab_feudalism_timurid_conquest"
+		texturefile = "gfx/interface/ages/ab_feudalism_timurid_conquest.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ab_feudal_unique_sons_of_genghisid"
+		texturefile = "gfx/interface/ages/ab_feudal_unique_sons_of_genghisid.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ab_feudal_celestial_mandate"
+		texturefile = "gfx/interface/ages/ab_feudal_celestial_mandate.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ab_feudalism_bohemian_imperial_dominance"
+		texturefile = "gfx/interface/ages/ab_feudalism_bohemian_imperial_dominance.dds"
+	}
+
+# Age of Discovery Abilities
+	spriteType = {
+		name = "GFX_ab_disc_colonial_range"
+		texturefile = "gfx/interface/ages/ab_disc_colonial_range.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ab_disc_claims"
+		texturefile = "gfx/interface/ages/ab_disc_claims.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ab_disc_general_cost_leader_pool"
+		texturefile = "gfx/interface/ages/ab_disc_general_cost_leader_pool.dds"
+	}
+	
+# Institutions
+	# spriteType = { #Gunpowder Institution GFX
+		# name = "GFX_gunpowder_institution"
+		# texturefile = "gfx//interface//gunpowder_institution.dds"
+		# loadType = "INGAME"
+		# transparencecheck = yes
+	# }
+	spriteType = { 
+		name = "GFX_icon_institution_gunpowder_institution"
+		texturefile = "gfx//interface//institutions//gunpowder_institution.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_institution_tab_gunpowder_institution"
+		texturefile = "gfx//interface//institutions//institution_tab_gunpowder_institution.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	# spriteType = { #Mercantilism Institution GFX
+		# name = "GFX_mercantilism_institution"
+		# texturefile = "gfx//interface//mercantilism_institution.dds"
+		# loadType = "INGAME"
+		# transparencecheck = yes
+	# }
+	spriteType = { 
+		name = "GFX_icon_institution_mercantilism_institution"
+		texturefile = "gfx//interface//institutions//mercantilism_institution.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_institution_tab_mercantilism_institution"
+		texturefile = "gfx/interface/institutions//institution_tab_mercantilism_institution.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	
+#Great Projects
+	pdxmesh = {
+		name = "alx_great_lighthouse_mesh"
+		file = "gfx/models/Buildings/alexandria_library.mesh" 
+		scale = 1.0
+	}
+
+	#Icons
+	spriteType = {
+		name = "GFX_nestorian_neg_estate"
+		texturefile = "gfx/interface/nestorian_neg_estate.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_nestorian_netural_estate"
+		texturefile = "gfx/interface/nestorian_netural_estate.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_nestorian_pos_estate"
+		texturefile = "gfx/interface/nestorian_pos_estate.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_zoroastrian_neg_estate"
+		texturefile = "gfx/interface/zoroastrian_neg_estate.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_zoroastrian_pos_estate"
+		texturefile = "gfx/interface/zoroastrian_pos_estate.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_zoroastrian_netural_estate"
+		texturefile = "gfx/interface/zoroastrian_netural_estate.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_coptic_neg_estate"
+		texturefile = "gfx/interface/coptic_neg_estate.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_coptic_pos_estate"
+		texturefile = "gfx/interface/coptic_pos_estate.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_coptic_netural_estate"
+		texturefile = "gfx/interface/coptic_netural_estate.dds"
+		noOfFrames = 1
+	}
+#The Janitors Idea Additions
+
+	spriteType = {
+		name = "GFX_idea_settlement_ideas_1356"
+		texturefile = "gfx//interface//ideas//idea_settlement_ideas_1356.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+    }
+    
+    spriteType = {
+		name = "GFX_idea_navigation_ideas_1356"
+		texturefile = "gfx//interface//ideas//idea_navigation_ideas_1356.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+
+	
+	spriteType = {
+		name = "GFX_idea_grand_court_ideas"
+		texturefile = "gfx//interface//ideas//idea_grand_court_ideas.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+    }
+    
+    spriteType = {
+		name = "GFX_idea_imperial_ideas"
+		texturefile = "gfx//interface//ideas//idea_imperial_ideas.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+    }
+    
+    spriteType = {
+        name = "GFX_idea_domination_ideas"
+		texturefile = "gfx//interface//ideas//idea_domination_ideas.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    spriteType = {
+        name = "GFX_idea_professionalism_ideas"
+		texturefile = "gfx//interface//ideas//idea_professionalism_ideas.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+    }
+    
+    spriteType = {
+        name = "GFX_idea_education_ideas"
+		texturefile = "gfx//interface//ideas//idea_education_ideas.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+    }
+    
+    spriteType = {
+        name = "GFX_idea_theocratic_ideas"
+		texturefile = "gfx//interface//ideas//idea_theocratic_ideas.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+    }
+    
+	spriteType = {
+        name = "GFX_idea_military_doctrine_ideas"
+		texturefile = "gfx//interface//ideas//idea_military_doctrine_ideas.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+    }
+	
+    spriteType = {
+        name = "GFX_idea_blank_idea_slot_1"
+		texturefile = "gfx//interface//ideas//idea_blank_idea_slot_1.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+    }
+    
+	spriteType = {
+        name = "GFX_idea_blank_idea_slot_2"
+		texturefile = "gfx//interface//ideas//idea_blank_idea_slot_2.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+    }	
+	
+	## Major Thanks to the folks over at Europa Expanded!
+	## GFX_diplomacy_action_subsidies and GFX_diplomacy_action_province are the known avaliable templates that can be changed
+	spriteType = {
+		name = "GFX_diplomacy_action_province"
+		texturefile = "gfx//new_diplomatic_actions_gfx//subject_unique_interactions_icon_action.dds"
+		alwaystransparent = yes
+	}	
+	spriteType = {
+		name = "GFX_cb_domination_idea_subjugate"
+		texturefile = "gfx/interface/casus_bellis/cb_vassalize_mission.tga"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+}

@@ -1,0 +1,303 @@
+# WHIden Horde Tributaries (not Caucasus)
+dependency = {
+	subject_type = "golden_horde_tributary_state"
+	first = WHI
+	second = RSO
+	start_date = 1355.1.1
+	end_date = 1380.9.8
+}
+
+dependency = {
+	subject_type = "golden_horde_tributary_state"
+	first = WHI
+	second = MOS
+	start_date = 1355.1.1
+	end_date = 1380.9.8
+}
+
+dependency = {
+	subject_type = "golden_horde_tributary_state"
+	first = WHI
+	second = CHR
+	start_date = 1355.1.1
+	end_date = 1380.9.8
+}
+
+dependency = {
+	subject_type = "golden_horde_tributary_state"
+	first = WHI
+	second = KIE
+	start_date = 1355.1.1
+	end_date = 1380.9.8
+}
+
+dependency = {
+	subject_type = "golden_horde_tributary_state"
+	first = WHI
+	second = TVE
+	start_date = 1355.1.1
+	end_date = 1380.9.8
+}
+
+dependency = {
+	subject_type = "golden_horde_tributary_state"
+	first = WHI
+	second = NZH
+	start_date = 1355.1.1
+	end_date = 1380.9.8
+}
+
+dependency = {
+	subject_type = "golden_horde_tributary_state"
+	first = WHI
+	second = SMO
+	start_date = 1355.1.1
+	end_date = 1380.9.8
+}
+
+dependency = {
+	subject_type = "golden_horde_tributary_state"
+	first = WHI
+	second = YAR
+	start_date = 1355.1.1
+	end_date = 1380.9.8
+}
+
+dependency = {
+	subject_type = "golden_horde_tributary_state"
+	first = WHI
+	second = OKA
+	start_date = 1355.1.1
+	end_date = 1380.9.8
+}
+
+dependency = {
+	subject_type = "golden_horde_tributary_state"
+	first = WHI
+	second = MRM
+	start_date = 1355.1.1
+	end_date = 1380.9.8
+}
+
+dependency = {
+	subject_type = "golden_horde_tributary_state"
+	first = WHI
+	second = DMT
+	start_date = 1355.1.1
+	end_date = 1380.9.8
+}
+
+dependency = {
+	subject_type = "golden_horde_tributary_state"
+	first = WHI
+	second = VLD
+	start_date = 1355.1.1
+	end_date = 1380.9.8
+}
+
+dependency = {
+	subject_type = "golden_horde_tributary_state"
+	first = WHI
+	second = SDU
+	start_date = 1355.1.1
+	end_date = 1380.9.8
+}
+
+dependency = {
+	subject_type = "golden_horde_tributary_state"
+	first = WHI
+	second = M2A
+	start_date = 1355.1.1
+	end_date = 1380.9.8
+}
+
+dependency = {
+	subject_type = "golden_horde_tributary_state"
+	first = WHI
+	second = BOG
+	start_date = 1355.1.1
+	end_date = 1380.9.8
+}
+
+dependency = {
+	subject_type = "golden_horde_tributary_state"
+	first = WHI
+	second = UDM
+	start_date = 1355.1.1
+	end_date = 1380.9.8
+}
+
+dependency = {
+	subject_type = "golden_horde_tributary_state"
+	first = WHI
+	second = MRR
+	start_date = 1355.1.1
+	end_date = 1380.9.8
+}
+
+dependency = {
+	subject_type = "golden_horde_tributary_state"
+	first = WHI
+	second = MR1
+	start_date = 1355.1.1
+	end_date = 1380.9.8
+}
+
+dependency = {
+	subject_type = "golden_horde_tributary_state"
+	first = WHI
+	second = MR2
+	start_date = 1355.1.1
+	end_date = 1380.9.8
+}
+
+dependency = {
+	subject_type = "golden_horde_tributary_state"
+	first = WHI
+	second = MI1
+	start_date = 1355.1.1
+	end_date = 1380.9.8
+}
+
+#dependency = {
+#	subject_type = "tributary_state"
+#	first = WHI
+#	second = NOV
+#	start_date = 1355.1.1
+#	end_date = 1380.9.8
+#}
+
+# Lithuania-Tver Connection
+#alliance = {
+#	first = LIT
+#	second = TVE
+#	start_date = 1350.1.1
+#	end_date = 1377.5.29 
+#}
+
+# Novgorod alliance
+alliance = {
+	first = NOV
+	second = PSK
+	start_date = 1355.1.1
+	end_date = 1380.9.8
+}
+
+# Kiev and 'Lowlands' Union
+union = {
+	first = KIE
+	second = PDA
+	start_date = 1356.12.24
+	end_date = 1393.1.1
+}
+
+#alliance = {
+#	first = MOS
+#	second = BLO
+#	start_date = 1355.1.1
+#	end_date = 1380.9.8
+#}
+
+# Moskovite vassal - Battle of Kulikovo
+vassal = {
+	first = MOS
+	second = MRM
+	start_date = 1380.9.8
+	end_date = 1393.1.1
+}
+
+vassal = {
+	first = MOS
+	second = PSK
+	start_date = 1380.9.8
+	end_date = 1444.1.1
+}
+
+vassal = {
+	first = MOS
+	second = YAR
+	start_date = 1380.9.8
+	end_date = 1444.1.1
+}
+
+vassal = {
+	first = MOS
+	second = RSO
+	start_date = 1380.9.8
+	end_date = 1444.1.1
+}
+
+# Moskovite vassal - Galitsch
+vassal = {
+	first = MOS
+	second = GLY
+	start_date = 1356.1.1
+	end_date = 1363.1.1
+}
+
+# Moskovite vassal - Kostroma
+vassal = {
+	first = MOS
+	second = KMA
+	start_date = 1356.1.1
+	end_date = 1363.1.1
+}
+
+# Moskovite vassal - Beloozero
+vassal = {
+	first = MOS
+	second = BLO
+	start_date = 1330.1.1
+	end_date = 1389.1.1
+}
+
+# Novgorod vassal - Great Perm
+vassal = {
+	first = NOV
+	second = PRM
+	start_date = 1356.1.1
+	end_date = 1440.1.1
+}
+
+# Novgorod vassal - Vyatskaya Zemlya
+vassal = {
+	first = NOV
+	second = VYL
+	start_date = 1356.1.1
+	end_date = 1440.1.1
+}
+
+
+# Ryazanian Anti-Moskovite Alliance ## Changed to be a White Horde Tribute
+dependency = {
+	subject_type = "golden_horde_tributary_state"
+	first = WHI
+	second = RYA
+	start_date = 1356.1.1
+	end_date = 1372.9.8
+}
+
+# Muscovy and Crimea
+alliance = {
+	first = MOS
+	second = CRI
+	start_date = 1480.1.1
+	end_date = 1503.4.1
+}
+
+#Novgorod and Ingria
+vassal = {
+	first = NOV
+	second = IN6
+	start_date = 1356.1.1 #sometime in 1337 historically
+	end_date = 1443.12.31
+	#end_date = 1478.1.15
+}
+
+#Novgorod and Ingria II
+vassal = {
+	first = NOV
+	second = IN6
+	start_date = 1444.1.1 #sometime in 1337 historically
+	end_date = 1478.1.15
+}

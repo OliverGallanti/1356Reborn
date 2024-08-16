@@ -1,0 +1,32 @@
+# 2142 - Huai'an (1356)
+# Changes: QIC/YUA
+
+owner = QIC
+controller = QIC
+culture = jianghuai
+religion = confucianism
+capital = "Huai'an"
+trade_goods = fish
+hre = no
+base_tax = 2
+
+base_production = 2
+base_manpower = 2
+is_city = yes
+add_core = YUA
+add_core = MNG
+
+discovered_by = chinese
+discovered_by = nomad_group
+
+1350.1.1  = { add_core = QIC }
+1362.1.1 = { owner = CKT controller = CKT add_core = CKT remove_core = QIC }
+1363.1.1 = { owner = WUU controller = WUU add_core = WUU remove_core = CKT }
+1367.1.1  = { owner = ZHU controller = ZHU add_core = ZHU remove_core = WUU }
+1368.1.23  = { owner = MNG controller = MNG remove_core = ZHU }
+1368.9.14 = { remove_core = YUA }
+1519.1.1  = { discovered_by = POR } # Tome Pires
+1645.6.1  = {	owner = QNG
+		controller = QNG
+		add_core = QNG
+	    }

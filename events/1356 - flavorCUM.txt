@@ -1,0 +1,135 @@
+#Based on the Kalmyk event chain. 
+
+#Arrival of the Kalmyks by Daniel Tolman
+
+namespace = flavor_cum
+normal_or_historical_nations = yes
+
+country_event = {
+	id = flavor_cum.1
+	title = "flavor_cum.t.1"
+	desc = "flavor_cum.d.1"
+	picture = HORDE_ON_HORSEBACK_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		#is_year = 1365
+		NOT = { is_year = 1440 }
+		is_subject = no
+		is_at_war = no
+		NOT = { exists = CUM }
+		owns_core_province = 4126 #Bacs
+		
+		#I almost want to add more here...
+		
+	}
+	#mean_time_to_happen = {
+	#	months = 150 #12.5 years
+	#}
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+				4126 = { #Bacs
+					add_core = CUM
+				}
+				release = CUM
+				CUM = {
+					change_government = monarchy
+					add_government_reform = golden_bull_federation_government
+					#adopt_reform_progress = ROOT
+					capital_scope = {
+						build_to_forcelimit = {
+							infantry = 0.6
+							cavalry = 0.3
+						}
+						add_base_tax = 1
+						add_base_manpower = 2
+					}
+					add_treasury = 100
+					add_adm_power = 50
+					add_dip_power = 50
+					add_mil_power = 50
+				}
+				4126 = { #Bacs
+					change_religion = tengri_pagan_reformed
+					change_culture = cuman
+				}
+		}
+	}
+	option = {
+		name = "flavor_cum.1.a"
+		create_march = CUM
+		CUM = {
+			change_government = monarchy
+			add_government_reform = golden_bull_federation_government
+			add_opinion = {
+				who = ROOT
+				modifier = allowed_kalmyk_settlement
+			}
+		}
+		4126 = { remove_core = HUN }
+	}
+	option = {
+		name = "flavor_cum.1.b"
+		
+		trigger = {
+			ai = no
+		}
+		declare_war_with_cb = {
+			who = CUM
+			casus_belli = cb_independence_war
+			war_goal_province = 4126 #Bacs
+		}
+		CUM = {
+			change_government = monarchy
+			add_government_reform = golden_bull_federation_government
+		}
+	}
+	# option = {
+		# name = "flavor_cum.1.c"
+		
+		# trigger = {
+			# ai = no
+		# }
+		# switch_tag = CUM
+		# declare_war_with_cb = {
+			# who = CUM
+			# casus_belli = cb_independence_war
+			# war_goal_province = 4126 #Bacs
+		# }
+		
+		# europe = { discover_country = CUM }
+		# maghreb_region = { discover_country = CUM }
+		# egypt_region = { discover_country = CUM }
+		# mashriq_region = { discover_country = CUM }
+		# anatolia_region = { discover_country = CUM }
+		# persia_region = { discover_country = CUM }
+		# khorasan_region = { discover_country = CUM }
+		# arabia_region = { discover_country = CUM }
+		# caucasia_region = { discover_country = CUM }
+		# hindusthan_region = { discover_country = CUM }
+		# bengal_region = { discover_country = CUM }
+		# west_india_region = { discover_country = CUM }
+		# deccan_region = { discover_country = CUM }
+		# coromandel_region  = { discover_country = CUM }
+		# mediterrenean_region = { discover_country = CUM }
+		# arabian_sea_region = { discover_country = CUM }
+		# baltic_sea_region = { discover_country = CUM }
+		# north_sea_area = { discover_country = CUM }
+		# norwegian_sea_area = { discover_country = CUM }
+		# celtic_sea_area = { discover_country = CUM }
+		# english_channel_area = { discover_country = CUM }
+		# denmark_strait_area = { discover_country = CUM }
+		# central_asia_region  = { discover_country = CUM}
+		# baltic_sea_region = { discover_country = CUM }
+		# north_sea_area = { discover_country = CUM }
+		# norwegian_sea_area = { discover_country = CUM }
+		# white_sea_area = { discover_country = CUM }
+		# celtic_sea_area = { discover_country = CUM }
+		# english_channel_area = { discover_country = CUM }
+		# north_atlantic_area = { discover_country = CUM }
+		# bay_of_biscay_area = { discover_country = CUM }
+	# }
+}
+	

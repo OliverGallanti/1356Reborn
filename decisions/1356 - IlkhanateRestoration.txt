@@ -1,0 +1,129 @@
+country_decisions = {
+			
+	ilknanate_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_persia_flag }
+		   # has_country_flag = timurid_ilkhanate
+			#tag = TIM
+			has_reform = tribal_federation_ilkhan_reform
+		}
+		provinces_to_highlight = {
+			region = persia_region
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = ILK }
+			has_reform = tribal_federation_ilkhan_reform
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {	
+				value = 25
+				is_core = ROOT
+				region = persia_region
+			}		
+			OR = {
+				owns_core_province = 428	
+				owns_core_province = 429		
+			}	
+			OR = {
+				owns_core_province = 416	
+				owns_core_province = 410		
+			}				
+		}
+		effect = {
+			change_tag = ILK
+			on_change_tag_effect = yes			
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			428 = {
+				move_capital_effect = yes
+				add_base_production = 1
+				add_base_tax = 1
+				add_base_manpower = 1
+				add_center_of_trade_level = 1				
+			}					
+			add_prestige = 25
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}			
+			persia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_territorial_core = ROOT
+			}
+			basra_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			iraq_arabi_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}			
+			shahrizor_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}		
+			al_jazira_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}	
+			sistan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}		
+			mashhad_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}		
+			north_kurdistan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = ROOT
+			}		
+			erzurum_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = ROOT
+			}				
+			set_country_flag = formed_ilkhanate_flag
+			#override_country_name = ILK
+		}
+		ai_will_do = {
+			factor = 1	
+		}
+		ai_importance = 1000
+	}	
+}
