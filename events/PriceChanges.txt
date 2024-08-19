@@ -275,10 +275,12 @@ country_event = {
 		change_price = {
 			trade_goods = slaves
 			key = TRIANGLE_TRADE
-			value = 0.5
+			#value = 0.5
+			value = 1.5	#new_prices
 			duration = -1
 		}
-		add_years_of_income  = 0.25
+		#add_years_of_income  = 0.25
+		add_years_of_income  = 0.5	#new_prices
 		add_prestige = 20
 		set_global_flag = triangle_happened
 	}
@@ -762,10 +764,12 @@ country_event = {
 		change_price = {
 			trade_goods = spices
 			key = SPICE_TRADE
-			value = 0.5
+			#value = 0.5
+			value = 1	#new_prices
 			duration = -1
 		}
-		add_years_of_income  = 0.25
+		#add_years_of_income  = 0.25
+		add_years_of_income  = 0.5	#new_prices
 		add_prestige = 20
 	}
 }
@@ -796,7 +800,8 @@ country_event = {
 		change_price = {
 			trade_goods = slaves
 			key = ABOLITIONISM
-			value = -0.4
+			#value = -0.4
+			value = -1	#new_prices
 			duration = -1
 		}
 		add_prestige = 10
@@ -1406,7 +1411,8 @@ country_event = {
 		change_price = {
 			trade_goods = spices
 			key = DECLINE_OF_SPICE_TRADE
-			value = -0.4
+			#value = -0.4
+			value = -0.5	#new_prices
 			duration = -1
 		}
 	}

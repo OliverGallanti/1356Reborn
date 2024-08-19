@@ -7,7 +7,7 @@ culture = hungarian
 religion = catholic
 capital = "Sopron"
 trade_goods = grain
-hre = yes
+hre = no
 base_tax = 3 
 
 base_production = 3
@@ -26,10 +26,6 @@ discovered_by = ottoman
 # discovered_by = WHI
 # discovered_by = AST
 # discovered_by = QAS
-
-1356.12.24  = { hre = no } #BT In
-
-1356.12.26  = { hre = yes } #BT Out
 
 1506.1.1  = { revolt = { type = anti_tax_rebels size = 0 } controller = REB } # Szekely rebellion
 1507.1.1  = { revolt = {} controller = HUN }

@@ -2,7 +2,6 @@ guiTypes = {
 
 	windowType = {
 		name = "countrytechnologyview"
-		#position = { x=0 y=140 }	
 		position = { x=-600 y=140 }	
 		show_position = { x=0 y =140 }
 		hide_position = { x=-600 y =140 }	
@@ -95,7 +94,7 @@ guiTypes = {
 			iconType = {
 				name = "bg"
 				spriteType ="GFX_country_institutions_overlay"	
-				position = { x = -18 y = -152 }
+				position = { x = -18 y = -32 }
 				orientation = "UPPER_LEFT"
 			}
 			
@@ -114,8 +113,8 @@ guiTypes = {
 			
 			OverlappingElementsBoxType = {
 				name = "institutions"
-				position = { x = -35 y = 79 }
-				size = { x = 604 y = 128 }
+				position = { x = -22 y = 79 }
+				size = { x = 628 y = 128 }
 				Orientation = "UPPER_LEFT"
 				format = center
 				spacing = 1
@@ -137,7 +136,7 @@ guiTypes = {
 			
 			instantTextBoxType = {
 				name = "mod_institution_spread"
-				position = { x = 48 y = 25 }
+				position = { x = 46 y = 25 }
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 4 y = 4}	

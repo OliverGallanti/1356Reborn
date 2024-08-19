@@ -3777,8 +3777,8 @@ guiTypes = {
 		windowType = {
 			name = "institutions_window"
 			backGround=""
-			position = { x=480 y=-47 }
-			size = { x=475 y=540 }
+			position = { x=480 y=13 }
+			size = { x=475 y=480 }
 			dontRender = ""
 			horizontalBorder= ""
 			verticalBorder= ""
@@ -3820,7 +3820,7 @@ guiTypes = {
 			listboxType = {
 				name = "institutions"
 				position = { x= 26 y = 178 }
-				size = { x = 256 y = 480 }
+				size = { x = 296 y = 390 }
 				Orientation = "UPPER_LEFT"
 				spacing = 0
 				scrollbartype = "standardlistbox_slider"
@@ -3841,7 +3841,7 @@ guiTypes = {
 
 			guiButtonType = {
 				name = "institution_close_button"
-				position = { x = 304 y = 123 }
+				position = { x = 328 y = 123 }
 				quadTextureSprite ="GFX_closebutton2"
 				clicksound = close_window
 				shortcut = "n"

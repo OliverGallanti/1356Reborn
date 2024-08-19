@@ -1,7 +1,7 @@
 #4534 - Upita
 
-owner = TAK
-controller = TAK
+owner = T5K
+controller = T5K
 culture = lithuanian
 religion = baltic_pagan_reformed
 capital = "Upyte"

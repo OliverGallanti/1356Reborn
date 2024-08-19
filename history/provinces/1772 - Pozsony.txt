@@ -7,7 +7,7 @@ culture = slovak
 religion = catholic
 capital = "Pressburg"
 trade_goods = apiculture
-hre = yes
+hre = no
  
 base_tax = 5
 base_production = 5
@@ -28,14 +28,6 @@ discovered_by = ottoman
 # discovered_by = QAS
 extra_cost = 8
 center_of_trade = 1
-
-1356.12.24  = { 
-	hre = no
-} #BT In
-
-1356.12.26  = { 
-	hre = yes
-} #BT Out
 
 1432.1.1  = { unrest = 10 } # The city is attacked by Hussites
 1434.1.1  = { unrest = 0 }
