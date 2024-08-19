@@ -1,0 +1,106 @@
+# on_monarch_death = {
+	# if = {
+		# limit = {
+			# government = crusader_state_reform
+			# NOT = { has_country_flag = two_heirs_succession_crusader_flag }
+		# }
+		# ROOT = {
+			# set_country_flag = crusader_state_time_to_choose_ruler_flag
+		# }
+	# }
+	# events = {
+		# 1356government.98
+	# }
+# }
+
+# on_new_monarch = {
+	# events = { 
+		# fladebugevent.1
+		# sikandar.4
+		# sikandar.44445
+		# sikandar.1
+		# delhi_empire.102
+		# delhi_empire.560
+		# delhi_empire.561  
+		# delhi_empire.559 
+		# ming_emperor.3
+	# }
+# }
+
+# on_war_won = {
+	# events = { 
+		# sikandar.4
+		# sikandar.44444
+		# sikandar.444
+		# rus_independence.2
+		# rus_independence.6
+		# ming_emperor.1
+		# ming_emperor.11
+		# WarTwoPetersFlavor.9
+		# WarTwoPetersFlavor.10		
+	# }
+# }
+
+# on_war_lost = {
+	# events = { 
+		# rus_independence.3
+		# rus_independence.33
+	# }
+# }
+
+# on_monarch_death = {
+	# events = { 
+		# serbian_flavour.2
+		# serbian_flavour.4
+		# delhi_empire.102
+	# }
+# }
+
+# on_enforce_rebel_demands = {
+	# events = { 
+		# timurlane.123
+	# }
+# }
+
+
+# on_siege_won_country = {
+	# events = {
+		# delhi_empire.556 # Sack of Delhi - Sindh, End of Delhi
+	# }
+# }
+
+
+# on_monarch_death = {
+	# events = {
+		# novgorod_princes.1 # Electing a new Prince of Novgorod
+		# tribal_succession.1
+	# }
+# }
+
+
+#WIP
+
+#on_four_year_pulse_4 = { #1356 Election Events
+#	random_events = {
+#		golden_bull_elections.1
+#		
+#	}
+#
+#}
+
+# country
+#on_new_term_election = {
+#	events = {
+#		golden_bull_elections.1 #Peasant Republic/Frisian Republic
+#	}
+#}
+
+# country
+#on_death_election = {
+#	if = {
+#		limit = {
+#			has_reform = frisian_republic_gov
+#		}
+#		country_event = { id = golden_bull_elections.1 }
+#	}
+#}

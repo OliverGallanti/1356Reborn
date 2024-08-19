@@ -1,0 +1,12 @@
+bookmark =
+{
+	name = "RED_TURBAN_NAME"
+	desc = "RED_TURBAN_DESC"
+	date = 1363.1.1
+	
+	country = ZHU
+	country = CHN
+	country = WUU
+	country = QIC
+	country = SHU
+}

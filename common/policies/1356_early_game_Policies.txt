@@ -1,0 +1,1223 @@
+goldenbull_reconstruct_state_burucracy = {
+	monarch_power = ADM
+	potential = {
+		is_year = 1355
+		NOT = { is_year = 1450 }
+	}
+	
+	allow = {
+	NOT = { has_active_policy = goldenbull_autonomous_lordships }
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+		}	
+		government_rank = 2
+		NOT = { is_year = 1450 }
+	}
+		
+	monthly_reform_progress_modifier = 0.20
+
+	ai_will_do = {
+		factor = 0 #0.5
+		# modifier = {
+			# factor = 1000
+			# tag = TUR
+		# }
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+goldenbull_autonomous_lordships = {
+	monarch_power = ADM
+	potential = {
+		is_year = 1355
+		NOT = { is_year = 1450 }
+	}
+	
+	allow = {
+	NOT = { has_active_policy = goldenbull_reconstruct_state_burucracy }
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+		}	
+		NOT = { is_year = 1450 }
+	}
+	
+	min_autonomy = 15
+	years_of_nationalism = -5
+	global_unrest = -1
+	#expand_administration_cost = 0.5
+
+	ai_will_do = {
+		factor = 0 #0.25 
+		# modifier = {
+			# factor = 1000
+			# tag = LIT
+		# }		
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+goldenbull_maintain_relam_peace = {
+	monarch_power = ADM
+	potential = {
+		is_year = 1355
+		NOT = { is_year = 1450 }
+	}
+	
+	allow = {
+	is_at_war = no
+	NOT = { has_active_policy = goldenbull_delegate_dip_policies }
+	NOT = { has_active_policy = goldenbull_focus_adm_dip_not_mil }
+	NOT = { has_active_policy = goldenbull_reconstruct_state_burucracy }
+	NOT = { has_active_policy = goldenbull_autonomous_lordships }	
+	NOT = { has_active_policy = goldenbull_royal_education_admin }
+	NOT = { has_active_policy = goldenbull_diverse_advisors }
+	NOT = { has_active_policy = goldenbull_culture_adivsors }
+	NOT = { has_active_policy = goldenbull_reelection_campaigns }
+	NOT = { has_active_policy = goldenbull_theocratic_reform }
+	NOT = { has_active_policy = goldenbull_strengthen_religious_control }	
+	NOT = { has_active_policy = goldenbull_delegate_admin_policies }
+	NOT = { has_active_policy = goldenbull_focus_adm_dip_not_mil }	
+	NOT = { has_active_policy = goldenbull_justify_war_ae_debuff }
+	NOT = { has_active_policy = goldenbull_office_foreign_affairs }
+	NOT = { has_active_policy = goldenbull_estate_concessions_policy }
+	NOT = { has_active_policy = goldenbull_focus_domestic_trade }
+	NOT = { has_active_policy = goldenbull_royal_education_diplomatic }
+	NOT = { has_active_policy = goldenbull_grow_the_vassals_struct }
+	NOT = { has_active_policy = goldenbull_aid_the_poor_theo }
+	NOT = { has_active_policy = goldenbull_vision_of_commerce }
+	NOT = { has_active_policy = goldenbull_pursue_closer_bonds }
+	NOT = { has_active_policy = goldenbull_delegate_dip_policies }
+	NOT = { has_active_policy = goldenbull_delegate_admin_policies }	
+	NOT = { has_active_policy = goldenbull_focus_on_cav }
+	NOT = { has_active_policy = goldenbull_permit_loot_warfare }	
+	NOT = { has_active_policy = goldenbull_free_leaders_policy }
+	NOT = { has_active_policy = goldenbull_glory_of_war_hordes }
+	NOT = { has_active_policy = goldenbull_royal_education_military }
+	NOT = { has_active_policy = goldenbull_levy_the_war_taxes }
+	NOT = { has_active_policy = goldenbull_invest_in_the_castles }
+	NOT = { has_active_policy = goldenbull_patronage_the_shipwrights }
+	NOT = { has_active_policy = goldenbull_guards_of_the_holy_sites }		
+	NOT = { has_active_policy = goldenbull_expansion_of_the_merchant_fleet }
+	NOT = { has_active_policy = goldenbull_patronage_the_shipwrights }
+	NOT = { has_active_policy = goldenbull_guards_of_the_holy_sites }		
+	NOT = { has_active_policy = goldenbull_expansion_of_the_merchant_fleet }			
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+		}	
+		NOT = { is_year = 1450 }
+	}
+	
+	global_prosperity_growth = 1
+	development_cost = -0.2
+	development_cost_modifier = -0.05
+	can_not_declare_war = yes
+	build_cost = -0.15
+	possible_mil_policy = -1
+	possible_dip_policy = -1
+	global_trade_goods_size = 0.25
+	global_unrest = -2
+	capped_by_forcelimit = yes
+	land_forcelimit_modifier = -0.33
+	naval_forcelimit_modifier = -0.33
+	possible_policy = -1
+
+	ai_will_do = { # Disabled for AI
+		factor = 0	
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+goldenbull_delegate_admin_policies = {
+	monarch_power = ADM
+	potential = {
+		is_year = 1355
+		NOT = { is_year = 1450 }
+	}
+	
+	allow = {
+	NOT = { has_active_policy = goldenbull_delegate_dip_policies }
+	NOT = { has_active_policy = goldenbull_focus_adm_dip_not_mil }
+	NOT = { has_active_policy = goldenbull_reconstruct_state_burucracy }
+	NOT = { has_active_policy = goldenbull_autonomous_lordships }	
+	NOT = { has_active_policy = goldenbull_maintain_relam_peace }
+	NOT = { has_active_policy = goldenbull_royal_education_admin }
+	NOT = { has_active_policy = goldenbull_diverse_advisors }
+	NOT = { has_active_policy = goldenbull_culture_adivsors }
+	NOT = { has_active_policy = goldenbull_reelection_campaigns }
+	NOT = { has_active_policy = goldenbull_theocratic_reform }
+	NOT = { has_active_policy = goldenbull_strengthen_religious_control }	
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+		}	
+		NOT = { is_year = 1450 }
+	}
+	
+	possible_adm_policy = -1
+	free_mil_policy = 1
+	free_dip_policy = 1
+
+	ai_will_do = {
+		factor = 0 #0.33
+		# modifier = {
+			# factor = 1000
+			# tag = DAN
+		# }		
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+goldenbull_royal_education_admin = {
+	monarch_power = ADM
+	potential = {
+		is_year = 1355
+		OR = {
+			government = monarchy
+			government = tribal
+		}	
+		NOT = { is_year = 1450 }
+	}
+	
+	allow = {
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+		}	
+		OR = {
+			government = monarchy
+			government = tribal
+		}	
+		NOT = { is_year = 1450 }
+	}
+	
+	country_admin_power = 1
+	advisor_pool = -2
+	monthly_support_heir_gain = 0.1
+
+	ai_will_do = {
+		factor = 0 #0.4
+		# modifier = {
+			# factor = 1000
+			# tag = ENG
+		# }		
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+goldenbull_diverse_advisors = {
+	monarch_power = ADM
+	potential = {
+		is_year = 1355
+		NOT = { is_year = 1450 }
+	}
+	
+	allow = {
+	NOT = { has_active_policy = goldenbull_culture_adivsors }
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+		}	
+		NOT = { is_year = 1450 }
+	}
+	
+	advisor_pool = 2
+	yearly_corruption = -0.10
+	monthly_splendor = 1
+	prestige = -1
+
+	ai_will_do = { # Disabled for AI
+		factor = 0		
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+
+goldenbull_culture_adivsors = {
+	monarch_power = ADM
+	potential = {
+		is_year = 1355
+		NOT = { is_year = 1450 }
+	}
+	
+	allow = {
+	NOT = { has_active_policy = goldenbull_diverse_advisors }
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+		}	
+		NOT = { is_year = 1450 }
+	}
+	
+	advisor_cost = -0.2
+	legitimacy = -1
+	yearly_corruption = 0.15
+	all_estate_influence_modifier = 0.1
+
+	ai_will_do = { # Disabled for AI
+		factor = 0
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+
+## Diplomatic Policies
+
+
+goldenbull_justify_war_ae_debuff = {
+	monarch_power = DIP
+	potential = {
+		is_year = 1355
+		NOT = { is_year = 1450 }
+	}
+	
+	allow = {
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+		}	
+		NOT = { is_year = 1450 }
+	}
+	
+	ae_impact = -0.10
+	fabricate_claims_cost = -0.25
+	unjustified_demands = 0.2
+
+	ai_will_do = {
+		factor = 0 #0.4
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+goldenbull_office_foreign_affairs = {
+	monarch_power = DIP
+	potential = {
+		is_year = 1355
+		NOT = { is_year = 1450 }
+	}
+	
+	allow = {
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+		}	
+		NOT = { is_year = 1450 }
+	}
+	
+	improve_relation_modifier = 0.20
+	diplomats = 1
+
+	ai_will_do = {
+		factor = 0 #0.3
+		# modifier = {
+			# factor = 1000
+			# tag = FRA
+		# }		
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+goldenbull_estate_concessions_policy = {
+	monarch_power = DIP
+	potential = {
+		is_year = 1355
+		NOT = { is_year = 1450 }
+	}
+	
+	allow = {
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+		}	
+		NOT = { is_year = 1450 }
+	}
+	
+	all_estate_loyalty_equilibrium = 0.10
+	all_estate_influence_modifier = 0.15
+	#possible_dip_policy = -1
+
+	ai_will_do = {
+		factor = 0 #0.03
+		# modifier = {
+			# factor = 1000
+			# tag = POL
+		# }		
+		# modifier = {
+			# factor = 1000
+			# tag = HUN
+		# }		
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+goldenbull_focus_domestic_trade = {
+	monarch_power = DIP
+	potential = {
+		is_year = 1355
+		NOT = { is_year = 1450 }
+	}
+	
+	allow = {
+	num_of_merchants = 2
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+		}	
+		NOT = { is_year = 1450 }
+	}
+	
+	trade_range_modifier = -0.5
+	placed_merchant_power = 15
+	trade_efficiency = 0.15
+
+	ai_will_do = {
+		factor = 0 #0.00
+		# modifier = {
+			# factor = 1000
+			# culture_group = latin
+		# }		
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+goldenbull_delegate_dip_policies = {
+	monarch_power = DIP
+	potential = {
+		is_year = 1355
+		NOT = { is_year = 1450 }
+	}
+	
+	allow = {
+		NOT = { has_active_policy = goldenbull_delegate_admin_policies }
+		NOT = { has_active_policy = goldenbull_focus_adm_dip_not_mil }	
+		NOT = { has_active_policy = goldenbull_justify_war_ae_debuff }
+		NOT = { has_active_policy = goldenbull_office_foreign_affairs }
+		NOT = { has_active_policy = goldenbull_estate_concessions_policy }
+		NOT = { has_active_policy = goldenbull_focus_domestic_trade }
+		NOT = { has_active_policy = goldenbull_royal_education_diplomatic }
+		NOT = { has_active_policy = goldenbull_grow_the_vassals_struct }
+		NOT = { has_active_policy = goldenbull_aid_the_poor_theo }
+		NOT = { has_active_policy = goldenbull_vision_of_commerce }
+		NOT = { has_active_policy = goldenbull_pursue_closer_bonds }
+		custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+		}	
+		NOT = { is_year = 1450 }
+	}
+	
+	possible_dip_policy = -1
+	free_adm_policy = 1
+	free_mil_policy = 1
+
+	ai_will_do = {
+		factor = 0 #0.23
+		# modifier = {
+			# factor = 1000
+			# tag = MAM
+		# }		
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+goldenbull_royal_education_diplomatic = {
+	monarch_power = DIP
+	potential = {
+		is_year = 1355
+		NOT = { is_year = 1450 }
+		OR = {
+			government = monarchy
+			government = tribal
+		}	
+	}
+	
+	allow = {
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+		}	
+		OR = {
+			government = monarchy
+			government = tribal
+		}	
+		NOT = { is_year = 1450 }
+	}
+	
+	country_diplomatic_power = 1
+	advisor_pool = -2
+	monthly_support_heir_gain = 0.1
+
+	ai_will_do = {
+		factor = 0 #0.5
+		# modifier = {
+			# factor = 1000
+			# tag = FRA
+		# }		
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+
+goldenbull_grow_the_vassals_struct = {
+	monarch_power = DIP
+	potential = {
+		is_year = 1355
+		NOT = { is_year = 1450 }
+	}
+	
+	allow = {
+	vassal = 1
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+		}	
+		NOT = { is_year = 1450 }
+	}
+	
+	reduced_liberty_desire = -20
+	diplomatic_annexation_cost = -0.2
+
+	ai_will_do = {
+		factor = 0 #0.5
+		# modifier = {
+			# factor = 1000
+			# tag = MOS
+		# }	
+		# modifier = {
+			# factor = 1000
+			# tag = FRA
+		# }	
+		# modifier = {
+			# factor = 1000
+			# tag = HAB
+		# }	
+		# modifier = {
+			# factor = 1000
+			# tag = BUR
+		# }		
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+
+# Military policies
+
+goldenbull_focus_on_cav = { # Come back here
+	monarch_power = MIL
+	potential = {
+		is_year = 1355
+		NOT = { is_year = 1450 }
+		NOT = { is_horde = yes }
+	}
+	
+	allow = {
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+		}	
+		NOT = { is_year = 1450 }
+		NOT = { is_horde = yes }
+	}
+	
+	cavalry_cost = -0.15
+	#cavalry_flanking = 0.50
+	loot_amount = -0.50
+	available_province_loot = -0.50	
+	prestige_from_land = 1
+
+	ai_will_do = {
+		factor = 0 #0.35
+		# modifier = {
+			# factor = 1000
+			# tag = POL
+		# }	
+		# modifier = {
+			# factor = 1000
+			# tag = FRA
+		# }		
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+goldenbull_permit_loot_warfare = {
+	monarch_power = MIL
+	potential = {
+		is_year = 1355
+		NOT = { is_year = 1450 }
+	}
+	
+	allow = {
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+		}	
+		NOT = { is_year = 1450 }
+	}
+	
+	loot_amount = 0.50
+	available_province_loot = 0.50
+	improve_relation_modifier = -0.10
+
+	ai_will_do = {
+		factor = 0 #0.5
+		# modifier = {
+			# factor = 1000
+			# tag = ENG
+		# }		
+		# modifier = {
+			# factor = 1000
+			# tag = WHI
+		# }		
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+goldenbull_free_leaders_policy = {
+	monarch_power = MIL
+	potential = {
+		is_year = 1355
+		NOT = { is_year = 1450 }
+	}
+	
+	allow = {
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+		}	
+		NOT = { is_year = 1450 }
+	}
+	
+	free_leader_pool = 3
+	general_cost = -0.2
+	estate_negative_general_penalty_loyalty_modifier = -0.5
+	#possible_mil_policy = -1
+	nobles_influence_modifier = 0.1
+
+	ai_will_do = {
+		factor = 0 #0.8
+		
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+goldenbull_focus_adm_dip_not_mil = {
+	monarch_power = MIL
+	potential = {
+		is_year = 1355
+		NOT = { is_year = 1450 }
+	}
+	
+	allow = {
+	NOT = { has_active_policy = goldenbull_delegate_dip_policies }
+	NOT = { has_active_policy = goldenbull_delegate_admin_policies }	
+	NOT = { has_active_policy = goldenbull_focus_on_cav }
+	NOT = { has_active_policy = goldenbull_permit_loot_warfare }	
+	NOT = { has_active_policy = goldenbull_free_leaders_policy }
+	NOT = { has_active_policy = goldenbull_glory_of_war_hordes }
+	NOT = { has_active_policy = goldenbull_royal_education_military }
+	NOT = { has_active_policy = goldenbull_levy_the_war_taxes }
+	NOT = { has_active_policy = goldenbull_invest_in_the_castles }
+	NOT = { has_active_policy = goldenbull_patronage_the_shipwrights }
+	NOT = { has_active_policy = goldenbull_guards_of_the_holy_sites }		
+	NOT = { has_active_policy = goldenbull_expansion_of_the_merchant_fleet }	
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+		}	
+		NOT = { is_year = 1450 }
+	}
+	
+	possible_mil_policy = -1
+	free_adm_policy = 1
+	free_dip_policy = 1
+
+	ai_will_do = {
+		factor = 0 #0.1
+		# modifier = {
+			# factor = 1000
+			# tag = SER
+		# }
+		# modifier = {
+			# factor = 1000
+			# tag = TUR
+		# }		
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+goldenbull_glory_of_war_hordes = {
+	monarch_power = MIL
+	potential = {
+		is_year = 1355
+		NOT = { is_year = 1450 }
+		OR = {
+			has_reform = great_mongol_state_reform
+			has_reform = steppe_horde
+		}	
+	}
+	
+	allow = {
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+		}	
+		NOT = { is_year = 1450 }
+		OR = {
+			has_reform = great_mongol_state_reform
+			has_reform = steppe_horde
+		}			
+	}
+	
+	prestige_from_land = 1
+	army_tradition_from_battle = 0.5
+	#possible_mil_policy = -1
+
+	ai_will_do = {
+		factor = 0 #1000
+		
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+goldenbull_royal_education_military = {
+	monarch_power = MIL
+	potential = {
+		is_year = 1355
+		NOT = { is_year = 1450 }
+		OR = {
+			government = monarchy
+			government = tribal
+		}	
+	}
+	
+	allow = {
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+		}	
+		OR = {
+			government = monarchy
+			government = tribal
+		}	
+		NOT = { is_year = 1450 }
+	}
+	
+	country_military_power = 1
+	advisor_pool = -2
+	monthly_support_heir_gain = 0.1
+
+	ai_will_do = {
+		factor = 0 #0.15
+		# modifier = {
+			# factor = 1000
+			# tag = TUR
+		# }
+		# modifier = {
+			# factor = 1000
+			# tag = TRS
+		# }	
+		# modifier = {
+			# factor = 1000
+			# tag = JLR
+		# }		
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+goldenbull_levy_the_war_taxes = {
+	monarch_power = MIL
+	potential = {
+		is_year = 1355
+		NOT = { is_year = 1450 }
+	}
+	
+	allow = {
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+		}	
+		NOT = { is_year = 1450 }
+	}
+	
+	global_tax_modifier = 0.10
+	war_exhaustion = 0.03
+	global_unrest = 0.5
+	land_maintenance_modifier = -0.10
+
+	ai_will_do = {
+		factor = 0 #0.45
+		
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+goldenbull_invest_in_the_castles = {
+	monarch_power = MIL
+	potential = {
+		is_year = 1355
+		NOT = { is_year = 1450 }
+		NOT = { has_reform = great_mongol_state_reform  }	
+		NOT = { has_reform = steppe_horde  }
+	}
+	
+	allow = {
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+		}	
+		NOT = { is_year = 1450 }
+		ai = no
+	}
+	
+	defensiveness = 0.15
+	fort_maintenance_modifier = -0.15
+	#rival_border_fort_maintenance = -0.50
+	#possible_mil_policy = -1
+
+	ai_will_do = {
+		factor = 0 #0.7
+		
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+
+## New Hotfix #1 Policies
+
+goldenbull_strengthen_religious_control = {
+	monarch_power = ADM
+	potential = {
+		is_year = 1355
+		NOT = { is_year = 1450 }
+	}
+	
+	allow = {
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+		}	
+		NOT = { is_year = 1450 }
+	}
+	
+	global_missionary_strength = 0.01
+	missionaries = 1
+	tolerance_heretic = -2
+	tolerance_heathen = -2
+	church_loyalty_modifier = 0.1
+	
+	ai_will_do = {
+		factor = 0 #0.2
+		# modifier = {
+			# factor = 1000
+			# tag = POR
+		# }	
+		# modifier = {
+			# factor = 1000
+			# tag = ETH
+		# }		
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+goldenbull_theocratic_reform = {
+	monarch_power = ADM
+	potential = {
+		is_year = 1355
+		government = theocracy
+		NOT = { is_year = 1450 }
+	}
+	
+	allow = {
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}
+			government = theocracy			
+		}	
+		NOT = { is_year = 1450 }
+	}
+	
+	monthly_reform_progress = 0.20
+	tolerance_own = 2
+	
+	ai_will_do = {
+		factor = 0 #0
+		# modifier = {
+			# factor = 1000
+			# tag = PAP
+		# }		
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+goldenbull_reelection_campaigns = {
+	monarch_power = ADM
+	potential = {
+		is_year = 1355
+		government = republic
+		NOT = { is_year = 1450 }
+	}
+	
+	allow = {
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+			government = republic
+		}	
+		NOT = { is_year = 1450 }
+	}
+	
+	reelection_cost = -0.2
+	republican_tradition = 0.3
+	
+	ai_will_do = {
+		factor = 0 #5
+		# modifier = {
+			# factor = 1000
+			# tag = GEN
+		# }
+		# modifier = {
+			# factor = 1000
+			# tag = VEN
+		# }		
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+
+goldenbull_pursue_closer_bonds = {
+	monarch_power = DIP
+	potential = {
+		is_year = 1355
+		NOT = { is_year = 1450 }
+	}
+	
+	allow = {
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+		}	
+		NOT = { is_year = 1450 }
+	}
+	
+	monthly_favor_modifier = 0.25
+	years_to_integrate_personal_union = 15
+	
+	ai_will_do = {
+		factor = 0	#0.6	
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+goldenbull_aid_the_poor_theo = {
+	monarch_power = DIP
+	potential = {
+		is_year = 1355
+		government = theocracy
+		NOT = { is_year = 1450 }
+	}
+	
+	allow = {
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+			government = theocracy
+		}	
+		NOT = { is_year = 1450 }
+	}
+	
+	global_monthly_devastation = -0.05
+	global_prosperity_growth = 0.5
+    global_tax_modifier = -0.05
+	
+	ai_will_do = {
+		factor = 0 #5
+		# modifier = {
+			# factor = 1000
+			# tag = PAP
+		# }		
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+goldenbull_vision_of_commerce = {
+	monarch_power = DIP
+	potential = {
+		is_year = 1355
+		government = republic
+		NOT = { is_year = 1450 }
+	}
+	
+	allow = {
+	num_of_total_ports = 3
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+			government = republic
+		}	
+		NOT = { is_year = 1450 }
+	}
+	
+	trade_efficiency = 0.10
+	global_ship_trade_power = 0.33
+	
+	ai_will_do = {
+		factor = 0 #3
+		# modifier = {
+			# factor = 1000
+			# tag = VEN
+		# }		
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+goldenbull_patronage_the_shipwrights = {
+	monarch_power = MIL
+	potential = {
+		is_year = 1355
+		NOT = { is_year = 1450 }
+	}
+	
+	allow = {
+	num_of_total_ports = 3
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+		}	
+		NOT = { is_year = 1450 }
+	}
+	
+	global_ship_cost = -0.20
+	global_ship_recruit_speed = -0.20
+	
+	ai_will_do = {
+		factor = 0 #0.3
+		# modifier = {
+			# factor = 5
+			# culture_group = latin
+		# }		
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+goldenbull_guards_of_the_holy_sites = {
+	monarch_power = MIL
+	potential = {
+		is_year = 1355
+		NOT = { is_year = 1450 }
+		government = theocracy
+	}
+	
+	allow = {
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+		}	
+		government = theocracy
+		NOT = { is_year = 1450 }
+	}
+	
+	global_manpower = 7.5
+	discipline = 0.025
+	
+	ai_will_do = {
+		factor = 0 #3
+		# modifier = {
+			# factor = 1000
+			# tag = PAP
+		# }		
+	}
+	effect = {}
+	removed_effect = {}	
+}
+
+goldenbull_expansion_of_the_merchant_fleet = {
+	monarch_power = MIL
+	potential = {
+		is_year = 1355
+		NOT = { is_year = 1450 }
+		government = republic
+	}
+	
+	allow = {
+	num_of_total_ports = 3
+	custom_trigger_tooltip = {
+		tooltip = has_selected_idea_1
+			OR = {
+				has_idea_group = blank_idea_slot_1
+				has_idea_group = blank_idea_slot_2			
+				adm_tech = 2
+			}	
+			government = republic
+		}	
+		NOT = { is_year = 1450 }
+	}
+	
+	light_ship_cost = -0.15
+	naval_forcelimit = 10
+	naval_tradition_from_trade = 1
+	
+	ai_will_do = {
+		factor = 0 #3
+		# modifier = {
+			# factor = 1000
+			# tag = VEN
+		# }	
+		# modifier = {
+			# factor = 1000
+			# culture_group = latin
+		# }			
+	}
+	effect = {}
+	removed_effect = {}	
+}

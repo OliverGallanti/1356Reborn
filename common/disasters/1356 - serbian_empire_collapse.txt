@@ -1,0 +1,51 @@
+serbian_empire_collapse = {
+	potential = {
+		tag = SER
+		exists = SER
+		started_in = 1356.12.26
+		NOT = { started_in = 1372.1.1 }
+		NOT = { has_global_flag = 1356_serbian_empire_collapse }
+		NOT = { has_global_flag = 1356_serbian_empire_restored }
+		NOT = { is_year = 1380 }
+	}
+	
+	can_start = {
+		#has_any_disaster = no
+		AND = {
+			is_year = 1371
+			# Thessaly to Serbia: win the civil war will grant the restoration
+			NOT = { has_global_flag = 1356_serbian_empire_restored }
+			# Serbia: trigger restoration conditions and pervent the collapse
+			NOT = {
+				total_own_and_non_tributary_subject_development = 200	
+				stability = 3
+				OR = {
+					all_subject_country = {
+						NOT = { liberty_desire = 10 }
+					}
+					NOT = { num_of_subjects = 1 }
+				}
+			}
+	
+		}
+	}
+	
+	can_stop = {
+		has_global_flag = 1356_serbian_empire_restored
+	}
+	
+	progress = {
+		modifier = {
+			factor = 20
+			is_year = 1371
+		}
+	}	
+	
+	can_end = {
+		always = yes
+	}
+
+	on_start = serbiancollapse.4
+	#on_end = serbiancollapse.2
+	
+}`

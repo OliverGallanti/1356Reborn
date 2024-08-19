@@ -1,0 +1,1609 @@
+age_of_feudalism = {
+	start = 1300
+	
+	can_start = {
+		always = yes
+	}
+	
+	religious_conflicts = yes
+	papacy = 0.50
+	
+	objectives = {
+		obj_feudalism_institution = { # - Reserved for Theocracies now
+			allow = {
+				NOT = { government = monarchy }
+				NOT = { government = republic }
+				NOT = { has_reform = ottoman_government }
+				ai = no
+			}		
+			has_institution = feudalism
+			has_institution = mercantilism_institution
+	 		all_state_province = {
+	 			mercantilism_institution = 100
+				feudalism = 100
+	 		}
+		}
+		obj_king_takes_direct_command = { #           - Reworked 
+			allow = {
+				NOT = { government = theocracy }
+				NOT = { government = tribal }
+				NOT = { government = native }
+				ai = no
+			}	
+			custom_trigger_tooltip = {
+				tooltip = fought_in_a_war_10_years
+				had_recent_war = 10		
+			}	
+			OR = {
+				is_monarch_leader = yes
+				is_heir_leader = yes
+			}	
+		}		
+		obj_trade_league = { #Suggested by Mexdus on the workshop suggestion thread 
+			allow = {
+				ai = no
+			}			
+			OR = {
+				is_in_trade_league = yes
+				mercantilism = 20
+			}
+		}
+		obj_powerful_estate = { 
+			# Audax Validator "." Ignore_ALL
+			allow = {
+				NOT = { has_reform = english_monarchy }
+				ai = no
+			}			
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 60
+			}
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 60
+			}
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 60
+			}	
+			num_of_estate_privileges = {
+				estate = estate_burghers
+				value = 3
+			}
+			num_of_estate_privileges = {
+				estate = estate_church
+				value = 3
+			}
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 3
+			}			
+		}		
+		obj_powerful_estate_england = { # If player has English Government
+			# Audax Validator "." Ignore_ALL
+			allow = {
+				has_reform = english_monarchy
+				ai = no
+			}	
+			legitimacy = 85
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 60
+			}
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 60
+			}	
+			num_of_estate_privileges = {
+				estate = estate_burghers
+				value = 3
+			}
+			num_of_estate_privileges = {
+				estate = estate_church
+				value = 3
+			}		
+		}			
+						
+		obj_papal_controller = { 
+			allow = { 
+				religion = catholic
+				ai = no
+			}
+			OR = {
+				is_papal_controller = yes
+				num_of_cardinals = 5
+				AND = {
+					papal_influence = 100
+					invested_papal_influence = 25
+				}
+			}
+	 	}
+		obj_feudalism_orthodox_icons = { 
+			allow = { 
+				religion = orthodox 
+				ai = no 
+			}
+			OR = {
+				current_icon = icon_michael
+				current_icon = icon_eleusa
+				current_icon = icon_pancreator
+				current_icon = icon_nicholas
+				current_icon = icon_climacus
+			}
+			patriarch_authority = 0.40
+	 	}	
+		obj_feudalism_coptic = { 
+			allow = { religion = coptic }
+			num_of_active_blessings = 3
+			calc_true_if = {
+				all_neighbor_country = {
+					religion = coptic
+				}
+				amount = 3
+			}
+	 	}	
+		obj_feudalism_nestorian = { 
+			allow = { 
+				religion = nestorian 
+				ai = no 
+			}
+			num_of_active_blessings = 2
+			calc_true_if = {
+				all_core_province = {
+					religion = ROOT
+				}
+				amount = 10
+			}
+	 	}		
+		obj_feudalism_hussite = { 
+			allow = { 
+				religion = hussite
+				ai = no 
+			}
+			church_power = 100
+			num_of_aspects = 1
+			check_variable = { which = num_converted_religion value = 10 }
+	 	}				
+		obj_feudalism_muslim_piety = { 
+			allow = { religion_group = muslim ai = no }
+			OR = {
+				piety = 0.75
+				NOT = { piety = -0.75}
+			}
+			religious_unity = 0.80 #Adjust as needed
+	 	}
+		obj_feudalism_confucianism_harmony = { 
+			allow = { religion = confucianism ai = no }
+			harmony = 70
+			religious_unity = 0.80 #Adjust as needed
+	 	}
+		obj_feudalism_buddhism_karma = { 
+			allow = { 
+				ai = no 
+				OR = {
+					religion = buddhism
+					religion = vajrayana
+					religion = mahayana
+					religion = hinduism
+				}
+			}
+			government_rank = 2
+			total_development = 300
+	 	}
+		obj_feudalism_hindu_pagan_gods = { 
+			allow = {
+				ai = no 
+				OR = {
+					religion = finnish_pagan_reformed
+					religion = baltic_pagan_reformed
+					religion = slavic_pagan_reformed
+					religion = hellenic_pagan
+					religion = norse_pagan_reformed
+				}
+			}
+			#uses_personal_deities = yes #Redundant
+			calc_true_if = {
+				all_core_province = {
+					religion = ROOT
+				}
+				amount = 15
+			}
+	 	}
+		obj_feudalism_fetishist = { 
+			allow = {
+				religion = shamanism
+				ai = no 
+			}
+			num_of_unlocked_cults = 5
+	 	}	
+		obj_feudalism_zoroastrian_jewish_sikh = { #And misc heresies/minor converter religions
+			allow = {
+				ai = no 
+				OR = {
+					religion = zoroastrian
+					religion = sikhism
+					religion = jewish
+					religion = cathar
+					religion = fraticelli
+					religion = waldensian
+					religion = lollard
+					religion = bon_reformed
+					religion = manichean
+					religion = mazdaki
+				}
+			}
+			total_development = 125
+			legitimacy_equivalent = 85
+			religious_unity = 0.85 #Adjust as needed
+			#number_of_sister-daughter-mother-wives = 4
+	 	}	
+		obj_non_christian_muslim_religious_unity = { 
+			allow = { 
+				ai = no 
+				OR = {
+					religion = shinto
+					religion = animism
+					religion = totemism
+					religion = inti
+					religion = nahuatl
+					religion = mesoamerican_religion
+					religion = tengri_pagan_reformed
+				}
+			}
+			calc_true_if = {
+				all_core_province = {
+					religion = ROOT
+				}
+				amount = 15
+			}
+			religious_unity = 0.90
+	 	}
+			
+		obj_deus_vult = { #Suggested by Mexdus on the workshop suggestion thread #Create Crusade Mechanics and integrate them into this instead?
+			allow = {
+				ai = no 
+				religion_group = christian
+				NOT = { government = monarchy }
+			}
+			OR = {
+				is_defender_of_faith = yes
+				owns_core_province = 379 #Jerusalem
+				owns_core_province = 2313 #Antioch
+				owns_core_province = 151 #Constantanopole
+				owns_core_province = 358 #Alexandria
+				#owns_core_province = 118 #Rome #No early Golden Age for Pope now
+			}
+		}
+		obj_twice_crowned = { # Something new for European nations
+			allow = {
+				ai = no 
+				religion_group = christian
+				government = monarchy
+			}
+			personal_union = 1
+			government_rank = 2
+		}		
+		obj_muslim_holy_war = { #Create Crusade Mechanics and integrate them into this instead?
+			allow = {
+				ai = no 
+				religion_group = muslim
+			}
+			OR = {
+				is_defender_of_faith = yes
+				owns_core_province = 379 #Jerusalem
+				owns_core_province = 385 #Mecca
+				owns_core_province = 384 #Medina
+				owns_core_province = 410 #Baghdad
+				owns_core_province = 382 #Damascus
+			}
+		}
+		obj_zoroastrian_holy_war = {
+			allow = {
+				ai = no 
+				religion_group = zoroastrian_group
+			}
+			OR = {
+				owns_core_province = 433 #Yazd
+				owns_core_province = 426 #Amol
+				owns_core_province = 429 #Isfahan
+				owns_core_province = 445 #Merv
+				owns_core_province = 2219 #Bandar Langeh
+			}
+		}
+		obj_jewish_holy_war = {
+			allow = {
+				ai = no 
+				religion_group = jewish_group
+			}
+			OR = {
+				owns_core_province = 2771 #Semien
+				owns_core_province = 379 #Jerusalem
+				owns_core_province = 4316 #Sharqiya
+				owns_core_province = 464 #Astrakhan
+				owns_core_province = 219 #Toledo
+			}
+		}
+		obj_dharmic_holy_war = {
+			allow = {
+				ai = no 
+				religion_group = dharmic
+			}
+			OR = {
+				owns_core_province = 522 #Delhi
+				owns_core_province = 506 #Multan
+				owns_core_province = 1948 #Bidar
+				owns_core_province = 550 #Mahakoshal
+				owns_core_province = 556 #Lower Doab
+			}
+		}
+		obj_buddhist_holy_war = {
+			allow = {
+				ai = no 
+				OR = {
+					religion = buddhism
+					religion = mahayana
+					religion = vajrayana
+					religion = bon_reformed #Too lazy to make a unique one for these people
+				}
+			}
+			OR = {
+				owns_core_province = 677 #Lhasa
+				owns_core_province = 2133 #Dege
+				owns_core_province = 601 #Sukhothai
+				owns_core_province = 584 #Ava
+				owns_core_province = 2371 #Song La
+			}
+		}
+		obj_confu_holy_war = {
+			allow = {
+				ai = no 
+				religion = confucianism
+			}
+			OR = {
+				owns_core_province = 1816 #Beijing
+				owns_core_province = 1821 #Nanjing
+				owns_core_province = 667 #Canton
+				owns_core_province = 700 #Xi'an
+				owns_core_province = 682 #Wuchang
+			}
+		}
+		obj_shinto_holy_war = {
+			allow = {
+				ai = no 
+				religion = shinto
+			}
+			OR = {
+				owns_core_province = 1020 #Kyoto
+				owns_core_province = 1832 #Yamato
+				owns_core_province = 1029 #Kai
+				owns_core_province = 1012 #Satsuma
+				owns_core_province = 1015 #Okinawa
+			}
+		}
+		obj_meso_holy_war = {
+			allow = {
+				ai = no 
+				OR = {
+					religion = nahuatl
+					religion = mesoamerican_religion
+				}
+			}
+			OR = {
+				owns_core_province = 852 #Mexico
+				owns_core_province = 850 #Tlaxcala
+				owns_core_province = 4591 #Chikinchel
+				owns_core_province = 2644 #Cholula
+				owns_core_province = 844 #Zapotec
+			}
+		}
+		obj_meso_inti_holy_war = {
+			allow = {
+				ai = no 
+				religion = inti
+			}
+			OR = {
+				owns_core_province = 808 #Cuzco
+				owns_core_province = 812 #Chanchan
+				owns_core_province = 794 #Jujuy
+				owns_core_province = 835 #Panama
+				owns_core_province = 775 #Asuncion
+			}
+		}
+		obj_african_religion_holy_war = {
+			allow = {
+				ai = no 
+				religion = shamanism
+			}
+			OR = {
+				owns_core_province = 2256 #Dagbon
+				owns_core_province = 1224 #Gonder
+				owns_core_province = 1792 #Merina
+				owns_core_province = 1184 #Zimbabwe
+				owns_core_province = 1170 #Mpemba
+			}
+		}
+		obj_totemism_religion_holy_war = {
+			allow = {
+				ai = no 
+				religion = totemism
+			}
+			OR = {
+				owns_core_province = 905 #Iowa
+				owns_core_province = 960 #Onondaga
+				owns_core_province = 987 #Niagra
+				owns_core_province = 925 #Tuskegee
+				owns_core_province = 878 #Navajo
+			}
+		}
+		obj_animism_religion_holy_war = {
+			allow = {
+				ai = no 
+				religion = totemism
+			}
+			OR = {
+				owns_core_province = 2174 #Hengyang
+				owns_core_province = 2934 #Manaus
+				owns_core_province = 775 #Asuncion
+				owns_core_province = 828 #Cartagema
+				owns_core_province = 489 #Tortuga
+			}
+		}
+		obj_tengri_holy_war = {
+			allow = {
+				ai = no 
+				religion = tengri_pagan_reformed
+			}
+			OR = {
+				owns_core_province = 2190 #Qaraqorum
+				owns_core_province = 730 #Girin
+				owns_core_province = 2358 #Altyn
+				owns_core_province = 466 #Sari
+				owns_core_province = 715 #Urumqi
+			}
+		}
+		obj_norse_holy_war = {
+			allow = {
+				ai = no 
+				religion = norse_pagan_reformed
+			}
+			OR = {
+				owns_core_province = 1 #Stockholm
+				owns_core_province = 17 #Akershus
+				owns_core_province = 12 #Sjaelland
+				owns_core_province = 370 #Reykjavik
+				owns_core_province = 980 #Beothuk #Included for BT
+			}
+		}
+		obj_baltic_holy_war = {
+			allow = {
+				ai = no 
+				religion = baltic_pagan_reformed
+			}
+			OR = {
+				owns_core_province = 272 #Vilna
+				owns_core_province = 271 #Samogitia
+				owns_core_province = 35 #Osel
+				owns_core_province = 41 #Konigsberg
+				owns_core_province = 257 #Warszawa
+			}
+		}
+		obj_finnic_holy_war = {
+			allow = {
+				ai = no 
+				religion = finnish_pagan_reformed
+			}
+			OR = {
+				owns_core_province = 27 #Abo
+				owns_core_province = 33 #Neva
+				owns_core_province = 304 #Penza
+				owns_core_province = 18 #Lappland
+				owns_core_province = 1082 #Kazan
+			}
+		}
+		obj_slavic_holy_war = {
+			allow = {
+				ai = no 
+				religion = slavic_pagan_reformed
+			}
+			OR = {
+				owns_core_province = 295 #Moskva
+				owns_core_province = 293 #Smolensk
+				owns_core_province = 280 #Kiev
+				owns_core_province = 310 #Novgorod
+				owns_core_province = 257 #Warszawa
+			}
+		}
+		obj_hellenic_holy_war = {
+			allow = {
+				ai = no 
+				religion = hellenic_pagan
+			}
+			OR = {
+				owns_core_province = 146 #Athens
+				owns_core_province = 145 #Morea
+				owns_core_province = 151 #Constantinople
+				owns_core_province = 318 #Sugla
+				owns_core_province = 118 #Rome
+			}
+		}
+		
+		obj_many_vassals_f = { #Feudal Society
+			allow = {
+				ai = no 
+			}
+			government_rank = 2
+			num_of_subjects = 4
+		}		
+		
+		
+		obj_cav_army = { #Suggested by Mexdus on the workshop suggestion thread
+			allow = {
+				ai = no 
+			}		
+			cavalry_fraction = 0.3 #Too high?
+			army_size_percentage = 0.85
+		}
+	}
+	
+
+	
+	abilities = {
+		ab_allow_feudal_de_jure_law_f = { 
+			effect = {
+				custom_tooltip = feudal_de_jure_law
+				set_country_flag = feudal_de_jure_law
+			}
+			modifier = {
+				min_autonomy_in_territories = -0.05
+				global_autonomy = -0.075
+			}	
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		ab_feudalism_institution_gain = { # Renamed to Scholarly Studies - Geno
+			modifier = {
+				global_institution_spread = 0.15
+				embracement_cost = -0.20
+			}
+			ai_will_do = {
+				factor = 10
+			}			
+		}
+		# ab_gothic_cathedrals = { # Reworked due to the Momuments, Replaced by Feudal Contracts
+			# modifier = {
+				# build_time = -0.25
+				# build_cost = -0.15 
+			# }
+			# effect = {
+				# custom_tooltip = ab_gothic_cathedrals_tt
+			# }
+			# ai_will_do = {
+				# factor = 1
+			# }
+		# }
+		ab_feudal_contracts = {	
+			modifier = {
+				vassal_forcelimit_bonus = 0.5
+				vassal_income = 0.10
+				reduced_liberty_desire = 15
+			}
+			ai_will_do = {
+				factor = 10
+			}	
+		}	
+		# ab_feudalism_court_life = { # Reworked into Cavalry Supremacy                       
+			# modifier = { #Was the AB that gave extra dip relations, removed due to being too powerful
+				# advisor_cost = -0.15
+				# advisor_pool = 2
+				# prestige = 0.5
+			# }
+			# ai_will_do = {
+				# factor = 10
+			# }	
+		# }	
+		ab_cavalry_supremacy = { # Reworked into Cavalry Supremacy                       
+			modifier = { #Was the AB that gave extra dip relations, removed due to being too powerful
+				cavalry_cost = -0.10
+				cav_to_inf_ratio = 0.10
+				cavalry_flanking = 0.25
+			}
+			ai_will_do = {
+				factor = 15
+			}	
+		}			
+		ab_mercs_over_chevaliers = { # Simply renamed to Mercenary Bands
+			modifier = {
+				merc_maintenance_modifier = -0.20
+				mercenary_cost = -0.15
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		ab_chevauchee = { #Historically this is a strategy to siege a fort down without harming it ##1.31 Modified to account for Loot amount being added to base values. Now enables Loot Wars
+			# effect = { # Not yet implemented
+				# custom_tooltip = chevauchee_wars
+				# custom_tooltip = chevauchee_loot_provinces
+				# set_country_flag = allow_chevauchee_wars
+			# }		
+			modifier = {
+				available_province_loot = 0.25
+				siege_ability = 0.10
+			}
+			ai_will_do = {
+				factor = 8 # Slightly less favored to prevent nation ruining
+			}
+		}
+		ab_feudalism_iron_fisted_rule = { #May require a better name
+			modifier = {
+				state_governing_cost = -0.15
+				expand_administration_cost = -0.20
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		
+		ab_feudalism_timurid_conquest = {
+			allow = {
+				tag = TIM
+			}
+			modifier = {
+				reinforce_cost_modifier = -0.33
+				reinforce_speed = 0.33
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}	
+
+		ab_feudal_unique_sons_of_genghisid = { # Not sold on the idea yet
+			allow = {
+				OR = {
+					tag = GLH
+					tag = YUA
+					tag = ILK
+					tag = JLR
+					tag = CHG
+					tag = KHA
+				}
+			}
+			modifier = {
+				legitimacy = 0.5
+				horde_unity = 0.5
+				raze_power_gain = 0.1
+				cavalry_shock = 0.5 
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+
+		ab_feudal_celestial_mandate = { #May need balancing
+			allow = { 
+				culture_group = east_asian
+				is_emperor_of_china = yes 
+			}
+			modifier = {
+				imperial_mandate = 0.05
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+
+		ab_feudalism_bohemian_imperial_dominance = {
+			allow = { #
+				tag = BOH
+				is_emperor = yes
+			}
+			modifier = {
+				diplomatic_reputation = 2
+				envoy_travel_time = -0.25
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+	}
+}
+
+age_of_discovery = { #Partially edited by #1356
+	start = 1425 #Historically? # Was 1400 but changed to 1425 to represent our reworked colonial ideas
+	
+	can_start = {
+		custom_trigger_tooltip = {
+			tooltip = AGE_OF_DISCOVERY_HOW_IT_STARTS
+			OR = {
+				AND = {
+					is_year = 1415
+					151 = { NOT = { owner = { religion_group = christian } } }
+				}
+				AND = {
+					is_year = 1415
+					118 = { NOT = { owner = { religion_group = christian } } }
+				}
+				is_year = 1425
+			}    
+		}    
+	}
+	
+	religious_conflicts = yes
+	papacy = 1.0
+
+	objectives = {
+		obj_discover_america = {
+			allow = {
+				capital_scope = {
+					OR = {
+						continent = europe
+						continent = asia
+						continent = africa
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = obj_discover_america_tooltip
+					OR = {
+						north_america = { has_discovered = ROOT }
+						south_america = { has_discovered = ROOT }
+						new_world = { has_discovered = ROOT }
+					}
+				}
+		}
+		obj_100_development = {
+			allow = {
+				capital_scope = {
+					NOT = {
+						continent = europe
+						continent = asia
+						continent = africa
+					}
+				}
+			}
+			total_development = 100
+
+		}
+		
+		
+		
+	
+		obj_5_centers_of_trade = {
+			calc_true_if = {
+				all_owned_province = {
+					OR = {
+						province_has_center_of_trade_of_level = 2
+						province_has_center_of_trade_of_level = 3
+					}
+					controlled_by = owner
+					is_core = ROOT
+				}
+				amount = 5
+			}
+		}
+		obj_30_development_city = {
+			custom_trigger_tooltip = {
+				tooltip = obj_30_development_city_tooltip
+				any_owned_province = {
+					exclude_from_progress = {
+						is_core = ROOT
+						controlled_by = owner
+					}
+					development_discounting_tribal = 30
+				}
+			}
+		}
+		obj_renaissance = {
+	 		has_institution = renaissance
+	 		all_state_province = {
+	 			renaissance = 100
+	 		}
+		}
+		
+		obj_two_unions = {
+			allow = {
+				religion_group = christian
+			}
+			personal_union  = 2
+		}
+		
+		obj_many_vassals = {
+			allow = {
+				NOT = { religion_group = christian }
+			}
+			vassal = 5
+		}		
+	
+		obj_two_continents = {
+			num_of_continents = 2
+		}
+	
+		obj_humiliate_rival = {
+			custom_trigger_tooltip = {
+				tooltip = obj_humiliate_rival_tooltip
+				has_country_flag = humiliated_rival
+			}
+		}
+	}		
+	
+
+	
+	
+	
+	abilities = {
+		ab_disc_colonial_range = { #MOVED TO AGE OF FEUDALISM. WAS FEUDAL DEJURE LAW 
+			modifier = {
+				range = 0.15
+				trade_range_modifier = 0.33
+			
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		
+		ab_justified_wars = {
+			modifier = {
+				ae_impact = -0.1
+			}
+			ai_will_do = {
+				factor = 10
+			}			
+		}
+		
+
+		ab_transfer_vassal_wargoal = {
+			modifier = {
+				can_transfer_vassal_wargoal = yes
+				can_chain_claim = yes
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		
+		ab_free_war_taxes = {
+			modifier = {
+				war_taxes_cost_modifier = -1.0
+			}
+			ai_will_do = {
+				factor = 10
+			}	
+		}
+		
+
+		ab_disc_general_cost_leader_pool = { #EDITED FROM VANILLA'S VALUES. CHANGED COMPLETLY. WAS CAV TO INF RATIO
+			modifier = {
+				general_cost = -0.10
+				free_leader_pool = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		ab_colony_boost_development = {
+			modifier = {
+				colony_development_boost = 1
+			}
+			ai_will_do = {
+				factor = 10
+				modifier = {
+					factor = 0
+					NOT = { num_of_colonists = 1 }
+				}
+			}
+		}
+		
+		ab_attack_bonus_in_capital_terrain = {
+			modifier = {
+				attack_bonus_in_capital_terrain = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		
+		ab_ottoman_siege_ability = { #EDITED FROM VANILLA'S VALUES. ADDED RUM.
+			allow = {
+				OR = {
+					tag = TUR
+					tag = RUM
+				}
+			}
+			modifier = { # Nerfed to focus on Urban's contributions instead of large Siege ability
+				#siege_ability = 0.15
+				leader_siege = 1
+				mil_advisor_cost = -0.10
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		
+		ab_portugal_colonial_growth = {
+		
+			allow = {
+				tag = POR
+			}
+			modifier = {
+				global_colonial_growth = 25
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ab_denmark_reduced_lib_desire = {
+		
+			allow = {
+				tag = DAN
+			}
+			modifier = {
+				reduced_liberty_desire = 30
+			}
+			ai_will_do = {
+				factor = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_subject_country = {
+							liberty_desire = 20
+						}
+					}
+				}
+			}
+		}
+		ab_venice_ship_trade = {
+		
+			allow = {
+				tag = VEN
+			}
+			modifier = {
+				global_ship_trade_power = 0.5
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+	}
+}
+
+
+age_of_reformation = {
+	start = 1530
+	
+	can_start = {
+		is_religion_enabled = protestant
+	}
+	
+	
+	religious_conflicts = yes
+	papacy = 1.25
+	
+	objectives = {
+		obj_christian_convert = {
+			OR = {
+				religion = protestant
+				religion = reformed
+				religion = anglican
+				religion = hussite
+			}
+		}
+		
+		obj_humanism_religious = {
+			OR = {
+				full_idea_group = humanist_ideas
+				full_idea_group = religious_ideas
+			}
+		}
+		
+		obj_convert_10_provinces = {
+			custom_trigger_tooltip = {
+				tooltip = obj_convert_10_provinces_tooltip
+				check_variable = { which = num_converted_religion value = 10 }
+			}
+		}
+		
+		obj_colonial_empire = {
+			colony = 5
+		}
+		
+		obj_force_converted = {
+			custom_trigger_tooltip = {
+				tooltip = obj_force_converted_tooltip
+				has_country_flag = force_converted
+			}
+		}
+		
+		obj_asian_trade = {
+			OR = {
+				trading_bonus = {
+					trade_goods = spices
+					value = yes
+				}
+				trading_bonus = {
+					trade_goods = cloves
+					value = yes
+				}
+				trading_bonus = {
+					trade_goods = chinaware
+					value = yes
+				}
+				trading_bonus = {
+					trade_goods = silk
+					value = yes
+				}
+			
+			}
+		
+		
+		}
+		
+		obj_unify_culture = {	
+			is_subject = no
+			has_unified_culture_group = yes
+		}
+	}	
+	
+	
+	abilities = {
+	
+		ab_allow_religion_enforced = {
+			effect = {
+				custom_tooltip = religion_enforced_edict
+				set_country_flag = religion_enforced_edict
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	
+
+		ab_siege_blockades = {
+			modifier = {
+				siege_blockade_progress = 1
+			}
+			ai_will_do = {
+				factor = 10
+				modifier = {
+					factor = 0
+					NOT = {
+							num_of_ports = 5
+					}
+				}
+
+			}
+		}
+
+		
+		ab_warscore_vs_religion = {
+			modifier = {
+				warscore_cost_vs_other_religion = -0.15
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		
+		ab_mercenary_discipline = {
+			modifier = {
+				mercenary_discipline = 0.05
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		ab_ship_power_propagation = {
+			modifier = {
+				ship_power_propagation = 0.2
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		
+		
+		ab_institution_spread_from_true_faith = {
+			modifier = {
+				institution_spread_from_true_faith = 0.5
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		ab_prestige_per_development_from_conversion = {
+			modifier = {
+				prestige_per_development_from_conversion = 0.3
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+	
+		ab_spain_shock_tactics = {
+			allow = {
+				tag = SPA
+			}
+			modifier = {
+				leader_land_shock = 1
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ab_mughal_artillery = {
+			allow = {
+				tag = MUG
+			}
+			modifier = {
+				artillery_power = 0.15
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		
+		ab_polish_legitimacy = {
+			allow = {
+				OR = {
+					tag = PLC
+					tag = POL
+					custom_trigger_tooltip = {
+						tooltip = enable_this_ability_tt
+						has_country_flag = unlock_polish_ability_flag
+					}
+				}
+			}
+			modifier = {
+				global_trade_goods_size_modifier = 0.33
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		
+		ab_persia_development = {
+			allow = {
+				tag = PER
+			}
+			modifier = {
+				development_cost = -0.2
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+	
+	}
+	
+	
+	
+
+	
+}
+
+
+
+
+age_of_absolutism = {
+	start = 1620
+	
+	can_start = {
+		is_institution_enabled = global_trade
+	}
+	
+	papacy = 1.5
+	
+	absolutism = {
+		harsh_treatment = 1
+		stability = 1
+		decrease_autonomy_command = 1
+		strengthen_government = 2
+		
+		increase_autonomy_command = -2
+		debase_currency = -1
+		execute_rebel_acceptance_command = -10
+		automatic_seat_in_parliament = -2
+		manual_seat_in_parliament = -2
+		war_exhaustion = -1
+	}
+	
+	
+	
+	objectives = {
+		obj_3_trade_companies = {
+			num_of_trade_companies = 3
+		}
+		
+		obj_universities = {
+			num_of_owned_provinces_with = {
+				has_building = university 
+				value = 5 
+			}
+		}
+	
+		obj_large_forcelimit = {
+			land_forcelimit = 200
+		}
+		
+		obj_90_absolutism = {
+			absolutism = 90
+		}
+		
+		obj_emperor_of_china = {
+			is_emperor_of_china = yes
+			imperial_mandate = 50
+		}
+		
+		obj_cultures_accepted = {
+			num_accepted_cultures = 5
+		}
+		
+		obj_win_religious_war = {
+			custom_trigger_tooltip = {
+				tooltip = obj_religious_league_war_on_winning_side_tooltip
+				has_country_flag = religious_league_war_on_winning_side
+			}
+			
+		}
+	}	
+	
+	
+	
+	
+	abilities = {
+	
+		ab_allow_edict_of_absolutism = {
+			effect = {
+				custom_tooltip = edict_of_absolutism_tt
+				set_country_flag = edict_of_absolutism
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		ab_rival_change = {
+			modifier = {
+				rival_change_cost = -0.5
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		ab_rival_border_fort = {
+			modifier = {
+				rival_border_fort_maintenance = -1.0
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+
+		ab_autonomy = {
+			modifier = {
+				autonomy_change_time = -0.5
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+
+		ab_harsh_treatment = {
+			modifier = {
+				harsh_treatment_cost = -0.5
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+	
+		ab_adm_efficiency = {
+			modifier = {
+				administrative_efficiency = 0.05
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		ab_yearly_absolutism = {
+			modifier = {
+				yearly_absolutism = 1
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+	
+	
+		ab_french_absolutism = {
+			allow = {
+				tag = FRA
+			}
+			modifier = {
+				max_absolutism_effect = 0.3
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ab_dutch_trade = {
+			allow = {
+				tag = NED
+			}
+			modifier = {
+				trade_steering = 0.33
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}	
+		ab_sweden_manpower = {
+			allow = {
+				OR = {
+					tag = SWE
+					tag = SCA
+				}
+			}
+			modifier = {
+				manpower_recovery_speed = 0.35
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+
+		ab_manchu_banner = {
+			allow = {
+				OR = {
+					tag = MCH
+					tag = QNG
+				}
+			}
+			effect = {
+				if = {
+					limit = {
+						NOT = { primary_culture = manchu }
+						NOT = { primary_culture = manchu_new }
+						NOT = { has_government_attribute = allow_banners }
+					}
+					custom_tooltip = ab_manchu_banner_tt
+				}
+			}
+			modifier = {
+				amount_of_banners = 0.5
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+	}
+}
+
+age_of_revolutions = {
+	start = 1710
+	
+	can_start = {
+		is_institution_enabled = enlightenment
+	}
+	
+	papacy = 2.0
+	absolutism = {
+		harsh_treatment = 1
+		stability = 1
+		decrease_autonomy_command = 1
+		strengthen_government = 2
+		
+		increase_autonomy_command = -2
+		debase_currency = -1
+		execute_rebel_acceptance_command = -10
+		automatic_seat_in_parliament = -2
+		manual_seat_in_parliament = -2
+		war_exhaustion = -1
+	}
+	
+	
+	objectives = {
+		obj_parliament = {
+			has_parliament = yes
+		}
+		
+		obj_emperor = {
+			OR = {	
+				is_emperor = yes
+				government_rank = 3
+				is_emperor_of_china = yes
+			}
+		}
+		obj_large_subject = {
+			any_subject_country = {
+				total_development = 250
+			}
+		}
+		obj_disc_army = {
+			has_global_modifier_value = {
+				which = discipline
+				value = 0.25
+				extra_shortcut = yes
+			}
+		}
+		obj_huge_capital = {
+			capital_scope = {
+				development = 50
+			}
+		}
+		obj_great_general = {
+			has_commanding_three_star = yes
+		}
+	
+		obj_two_institutions = {
+			num_of_owned_and_controlled_institutions = 2
+		}
+	}
+
+	abilities = {
+
+		ab_allow_anti_revolutionary_zeal = {
+			modifier = {
+				liberty_desire_from_subject_development = -0.15
+			}
+			ai_will_do = {
+				factor = 15
+				modifier = {
+					factor = 0
+					NOT = {
+						any_subject_country = {
+							liberty_desire = 30
+						}
+					}
+				}
+			}
+		}
+
+		ab_napoleonic_warfare = {
+			modifier = {
+				artillery_levels_available_vs_fort = 3
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		
+
+		
+		ab_force_march = {
+			modifier = {
+				force_march_free = yes
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		ab_more_ships_can_fire = {
+			modifier = {
+				global_naval_engagement_modifier = 0.20
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		ab_no_distance_for_core = {
+			modifier = {
+				ignore_coring_distance = yes
+			}
+			ai_will_do = {
+				factor = 15
+				modifier = {
+					# AI peace code relies on being limited by coring range, or it will create crazy border gore where it can't reach its new lands
+					factor = 0
+					OR = {
+						is_subject = no
+						overlord = {
+							ai = yes
+						}
+					}
+				}
+			}
+		}
+		
+		ab_backrow_artillery = {
+			modifier = {
+				backrow_artillery_damage = 0.20
+			}
+			ai_will_do = {
+				factor = 15
+			}
+		}
+		ab_same_contine_lib_desire = {
+			modifier = {
+				reduced_liberty_desire_on_same_continent = 25
+			}
+			ai_will_do = {
+				factor = 15
+				modifier = {
+					factor = 0
+					NOT = {
+						any_subject_country = {
+							liberty_desire = 30
+							same_continent = ROOT
+						}
+					}
+				}
+			}
+		}
+		ab_pru_military = {
+			allow = {
+				OR = {
+					tag = PRU
+					tag = GER
+				}
+			}
+			modifier = {
+				fire_damage_received = -0.2
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ab_gbr_fleet = {
+			allow = {
+				OR = {
+					tag = AVE
+					tag = GBR
+				}
+			}
+			modifier = {
+				max_admiral_fire = 1
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ab_russia_boost = {
+			allow = {
+				tag = RUS
+			}
+			modifier = {
+				min_autonomy_in_territories = -0.1
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ab_austrian_morale = {
+			allow = {
+				OR = {
+					tag = HAB
+					tag = HLR
+				}
+			}
+			modifier = {
+				morale_damage_received = -0.2
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}		
+		#ab_austria_rep = {
+		#	allow = {
+		#		OR = {
+		#			tag = HAB
+		#			tag = HLR
+		#		}
+		#	}
+		#	modifier = {
+		#		diplomatic_reputation = 5
+		#	}
+		#	ai_will_do = {
+		#		factor = 100
+		#	}
+		#}
+	}
+}

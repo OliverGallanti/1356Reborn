@@ -1,0 +1,33 @@
+# on_startup = {
+	# events = { 
+		# barbarossa.1
+		#flastartupevents.2
+		# flastartupevents.3
+		# flastartupevents.4
+		# flastartupevents.5
+		#hansa.1
+		#delhi_empire.101
+		#sikandar.66
+		#southern_india.101 #Vij Madurai conflict
+		# ottoman_golden_bull.999 #Ottoman Event to buff Heir
+		# rus_independence.4
+		# WarTwoPetersFlavor.1
+		# WarTwoPetersFlavor.2
+		# WarTwoPetersFlavor.10000000
+	# }
+	# if = {
+		# limit = { 
+			# tag = SWA 
+			# NOT = { is_year = 1360 }
+		# }
+		# country_event = { id = barbarossa.10 }
+	# }
+	# if = {
+		# limit = { 
+			# tag = BYZ
+			# is_year = 1356
+			# NOT = { is_year = 1452 }
+		# }
+		# country_event = { id = flagreatproject.4 }
+	# }
+# }

@@ -1,0 +1,176 @@
+super_lucky_nations = { # Called Timely Lucky Nations ingame
+	potential = {
+		ai = yes
+		OR = {
+			AND = {
+				OR = {
+					tag = TIM
+					tag = TRS	
+				}	
+				is_year = 1370
+				NOT = { is_year = 1465 }
+			}	
+			AND = {
+				tag = JLR
+				NOT = { exists = TIM }
+				NOT = { is_year = 1465 }
+			}	
+			AND = {
+				tag = MNG
+				NOT = { is_year = 1444 }
+			}
+			AND = {
+				tag = MAJ
+				NOT = { is_year = 1444 }
+			}
+			AND = {
+				tag = AKK
+				NOT = { is_year = 1500 }
+			}				
+			AND = {
+				tag = MCH
+				NOT = { is_year = 1700 }
+			}	
+			AND = {
+				tag = QNG
+				NOT = { is_year = 1750 }
+			}	
+			AND = {
+				tag = MJZ
+				NOT = { is_year = 1650 }
+			}			
+		}	
+	}
+
+	trigger = {
+		ai = yes
+		OR = {
+			AND = {
+				OR = {
+					tag = TIM
+					tag = TRS	
+				}	
+				is_year = 1370
+				NOT = { is_year = 1465 }
+			}	
+			AND = {
+				tag = JLR
+				NOT = { exists = TIM }
+				NOT = { is_year = 1465 }
+			}	
+			AND = {
+				tag = MNG
+				NOT = { is_year = 1444 }
+			}
+			AND = {
+				tag = MAJ
+				NOT = { is_year = 1444 }
+			}
+			AND = {
+				tag = AKK
+				NOT = { is_year = 1500 }
+			}				
+			AND = {
+				tag = MCH
+				NOT = { is_year = 1700 }
+			}	
+			AND = {
+				tag = QNG
+				NOT = { is_year = 1750 }
+			}	
+			AND = {
+				tag = MJZ
+				NOT = { is_year = 1650 }
+			}			
+		}		
+	}
+
+	#core
+	global_missionary_strength = 0.01
+	stability_cost_modifier = -0.10
+	global_institution_spread = 0.1
+	monthly_splendor = 2
+	governing_capacity = 150
+	country_admin_power = 1
+	country_diplomatic_power = 1
+	country_military_power = 1
+	all_estate_loyalty_equilibrium = 0.15	
+
+	#economy
+	mercenary_cost = -0.2
+	embracement_cost = -0.2
+	advisor_cost = -0.2
+	interest = -1
+	missionary_maintenance_cost = -0.1
+
+	#military
+	manpower_recovery_speed = 0.25
+	defensiveness = 0.1
+	siege_ability = 0.05
+
+	#diplomacy
+	spy_offence = 0.1
+	improve_relation_modifier = 0.25
+
+	#government
+	global_unrest = -1
+	republican_tradition = 0.5
+	legitimacy = 1
+	ae_impact = -0.25
+	governing_capacity_modifier = 0.25
+}
+
+
+
+
+reliance_on_feudalism = { # High Feudal Retainment ### Nerfs for OP Policies
+	potential = {
+		has_institution = renaissance
+		ai = no # Ai will always take the decision to remove Feudal Policies
+		NOT = { has_government_attribute = may_maintain_high_feudal_policies_post_feudalism }	
+	}
+
+	trigger = {
+		has_institution = renaissance
+		custom_trigger_tooltip = {
+			tooltip = relying_on_feudal_policies
+			OR = {
+				has_active_policy = 1356_reconstruct_state_burucracy
+				has_active_policy = 1356_autonomous_lordships
+				has_active_policy = 1356_maintain_relam_peace
+				has_active_policy = 1356_delegate_admin_policies
+				has_active_policy = 1356_royal_education_admin
+				has_active_policy = 1356_diverse_advisors
+				has_active_policy = 1356_culture_adivsors
+				has_active_policy = 1356_justify_war_ae_debuff
+				has_active_policy = 1356_office_foreign_affairs
+				has_active_policy = 1356_estate_concessions_policy
+				has_active_policy = 1356_focus_domestic_trade
+				has_active_policy = 1356_delegate_dip_policies
+				has_active_policy = 1356_royal_education_diplomatic
+				has_active_policy = 1356_grow_the_vassals_struct
+				has_active_policy = 1356_focus_on_cav
+				has_active_policy = 1356_permit_loot_warfare
+				has_active_policy = 1356_free_leaders_policy
+				has_active_policy = 1356_focus_adm_dip_not_mil
+				has_active_policy = 1356_glory_of_war_hordes
+				has_active_policy = 1356_royal_education_military
+				has_active_policy = 1356_levy_the_war_taxes
+				has_active_policy = 1356_invest_in_the_castles
+				has_active_policy = 1356_strengthen_religious_control
+				has_active_policy = 1356_theocratic_reform
+				has_active_policy = 1356_reelection_campaigns
+				has_active_policy = 1356_pursue_closer_bonds
+				has_active_policy = 1356_patronage_the_shipwrights
+				has_active_policy = 1356_guards_of_the_holy_sites
+				has_active_policy = 1356_expansion_of_the_merchant_fleet
+				has_active_policy = 1356_aid_the_poor_theo
+				has_active_policy = 1356_vision_of_commerce	
+			}	
+		}	
+	}
+	
+	possible_policy = -1
+	reform_progress_growth = -0.25
+	#icon = 1
+}

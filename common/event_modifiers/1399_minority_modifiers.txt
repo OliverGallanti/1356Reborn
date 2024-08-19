@@ -1,0 +1,49 @@
+expelled_nestorian = {
+
+}
+expelled_zoroastrian = {
+
+}
+encourage_nestorian_growth = {
+
+}
+
+encourage_zoroastrian_growth_modifier = {
+
+}
+
+##Nestorian Minorities## #Really clones of the Parsi Minorities
+
+golden_bull_nestorian_community = { #Generic province replacement for the old modifiers, just one sizze.
+	trade_goods_size = 0.75
+	picture = "GFX_nestorian_netural_estate"
+}
+
+
+#Zoroastrian Minorities
+
+
+golden_bull_parsi_community = {
+	trade_goods_size = 0.75
+	picture = "GFX_zoroastrian_netural_estate"
+}
+
+estate_zoroastrian_encourage_growth_modifier = {
+	local_development_cost = -0.1
+	local_build_cost = -0.2
+}
+
+estate_nestorian_encourage_growth_modifier = {
+	local_development_cost = -0.1
+	local_build_cost = -0.2
+}
+
+estate_nestorian_guaranteed_autonomy_mod = {
+	local_missionary_strength = -1
+	local_religious_unity_contribution = -1
+}
+
+estate_zoroastrian_guaranteed_autonomy_mod = {
+	local_missionary_strength = -1
+	local_religious_unity_contribution = -1
+}
